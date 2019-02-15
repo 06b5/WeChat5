@@ -1,0 +1,20 @@
+/* pages/carforum/hotforum/hotforum.wxss */
+
+
+.hot_mess_main{
+  width:1000rpx;
+  height: 130rpx;
+  display: flex;
+  align-items: center;
+  border-top: 1px black solid;
+
+}
+.hot_biao{
+  width:134rpx;
+  height: 130rpx;
+}
+.hot_name{
+  font-family: '微软雅黑';
+  margin-left: 60rpx;
+  font-size: 36rpx;
+}

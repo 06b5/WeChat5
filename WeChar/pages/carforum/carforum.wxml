@@ -1,0 +1,41 @@
+<!--pages/carforum/carforum.wxml-->
+<view>
+  <view class='forum_title'>{{car_title}}</view>
+  <text>\n</text>
+  <text>\n</text>
+  <view>
+    <form>
+      <view>
+        <input class='serech' placeholder='输入查询内容'></input>
+      </view>
+    </form>
+  </view>
+  <text>\n</text>
+  <view>
+    <image src='/image/IMG_014456.PNG' class='tu' bindtap='Xi'></image>
+    <image src='/image/IMG_0154.png' class='tu' bindtap='Addr'></image>
+    <image src='/image/IMG_015阿萨德4.png' class='tu' bindtap='Theme'></image>
+    <image src='/image/IMG_0154收到.png' class='tu' bindtap='Hot'></image>
+  </view>
+  <text>\n</text>
+  <text class='Jingxuan'>论坛精选</text>
+  <text>\n</text>
+  <text>\n</text>
+  <view class='News'>
+    <text class='news_content'>哈弗H6车胎爆了咋办啊？不知道啊，凉拌！</text>
+    <image src='/image/timg2.jpg' class='news_img'></image>
+    <view class='content'>
+      <text class='from_forum'>哈弗H6论坛</text>
+      <text class='from_forum_hu'>10回帖</text>
+    </view>
+    <text>\n</text>
+    <view class='News'>
+      <text class='news_content'>看这图片，你买得起吗？</text>
+      <image src='/image/timg1.jpg' class='news_img'></image>
+      <view class='content'>
+        <text class='from_forum'>炫富论坛</text>
+        <text class='from_forum_hu'>70回帖</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+.biaoti{
+font-size: 80rpx;
+margin-left: 200rpx;
+}
+
+.zi1{
+  margin-left: 60rpx;
+  font-family: '楷体';
+  font-size: 40rpx;
+}
+
+.zi2{
+  margin-left: 60rpx;
+  font-family: '楷体';
+  font-size:  30rpx;
+}
+
+.view1{
+  border-top: 4rpx black solid;
+}
+
+.view2{
+  border-bottom: 4rpx black solid;
+}
+
+.zi3{
+  color: white;
+}

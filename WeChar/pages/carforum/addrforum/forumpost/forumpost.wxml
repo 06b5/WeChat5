@@ -1,0 +1,38 @@
+<!--pages/carforum/brandforum/brandforuminfo/forumcontent/forumcontent.wxml-->
+<view class='forumcontentmain'>
+   <view class='postblock'>
+      <text class='postname'>{{Title}}</text>
+   </view>
+<text>\n</text>
+  <view class='postview'>
+<text>\n</text>
+
+<block wx:for="{{postcontent}}" wx:key="{{item.ID}}">
+   <view>
+<textarea class='postcontent'>{{item.PostContent}}</textarea>
+<text>\n</text>
+   </view>
+</block>
+   </view>
+     <view class='postbottom'>     
+     <text class='fontstyle'>回复</text>  
+     </view>
+     <block wx:for="{{getansers}}" wx:key="{{item.ID}}">
+       <view class='ansers'>
+         <textarea>{{item.AnserContent}}</textarea>
+       </view>
+   </block>
+     <view class='postname'>
+     <form bindsubmit='replies' data-addrforumid='{{forumid}}'>
+     <input class='repliescontent' name='repliescontent' value='{{repliescontent}}'>
+     <textarea>{{post}}</textarea>
+     </input>
+     <text>\n</text>
+     <button class='btnReplies' form-type='submit' type='primary' >回帖</button>
+     </form>
+     </view>
+     
+
+
+
+</view>

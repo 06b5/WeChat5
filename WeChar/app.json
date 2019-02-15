@@ -1,0 +1,70 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/allcars/Choice/Choice",
+    "pages/allcars/Specification/Specification",
+    "pages/allcars/allcarsindex/allcarsindex",
+    "pages/Mine/Invitation/Invitation",
+    "pages/Mine/Homepage/Homepage",
+    "pages/Mine/Message/Message",
+    "pages/Mine/Details/Details",
+    "pages/carforum/brandforum/forumpost/forumpost",
+    "pages/carforum/carforum",
+    "pages/carforum/carforum/carforum",
+    "pages/carforum/themeforum/forumpost/forumpost",
+    "pages/carforum/themeforum/themeforumindex/themeforumindex",
+    "pages/carforum/hotforum/hotforumindex/hotforumindex",
+    "pages/indexdetail/detail",
+    "pages/carforum/brandforum/brandforuminfo/brandforuminfo",
+    "pages/carforum/brandforum/brandforumindex/brandforumindex",
+    "pages/carforum/brandforum/posting/posting",
+    "pages/carforum/themeforum/posting/posting",
+    "pages/carforum/themeforum/themeforuminfo/themeforuminfo",
+    "pages/carforum/hotforum/posting/posting",
+    "pages/carforum/hotforum/hotforuminfo/hotforuminfo",
+    "pages/carforum/hotforum/forumpost/forumpost",
+    "pages/carforum/addrforum/addrforumindex/addrforumindex",
+    "pages/carforum/addrforum/posting/posting",
+    "pages/carforum/addrforum/addrforuminfo/addrforuminfo",
+    "pages/carforum/addrforum/forumpost/forumpost",
+    "pages/Mine/Indend/Indend",
+    "pages/Mine/Intention/Intention",
+    "pages/Mine/History/History",
+    "pages/rankinglist/rankinglist",
+    "pages/WorldAuto/WorldAuto"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "image/tabBar2.png",
+        "selectedIconPath": "image/tabBar1.png"
+      },
+      {
+        "pagePath": "pages/allcars/allcarsindex/allcarsindex",
+        "text": "选车",
+        "iconPath": "image/tabBar4.png",
+        "selectedIconPath": "image/tabBar3.png"
+      },
+      {
+        "pagePath": "pages/carforum/carforum",
+        "text": "论坛",
+        "iconPath": "image/tabBar6.png",
+        "selectedIconPath": "image/tabBar5.png"
+      },
+      {
+        "pagePath": "pages/Mine/Homepage/Homepage",
+        "text": "我的",
+        "iconPath": "image/tabBar8.png",
+        "selectedIconPath": "image/tabBar7.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+<!--pages/carforum/hotforum/hotforum.wxml-->
+<!--汽车论坛（热门）-->
+<view class='main'>
+<text class='class_Ping'>{{title}}</text>
+<text>\n</text>
+
+<view class='hot_mess_main'>
+<text>\t</text>
+<text class='hot_name' bindtap='tohotforum' data-hotname='WEY VV7论坛'>WEY VV7论坛</text>
+</view>
+<view class='hot_mess_main'>
+<text>\t</text>
+<text class='hot_name' bindtap='tohotforum' data-hotname='探界者论坛'>探界者论坛</text>
+</view>
+<view class='hot_mess_main'>
+<text>\t</text>
+<text class='hot_name' bindtap='tohotforum' data-hotname='领克01论坛'>领克01论坛</text>
+</view>
+<view class='hot_mess_main'>
+<text>\t</text>
+<text class='hot_name' bindtap='tohotforum' data-hotname='维特拉论坛'>维特拉论坛</text>
+</view>
+<view class='hot_mess_main'>
+<text>\t</text>
+<text class='hot_name' bindtap='tohotforum' data-hotname='名爵HS论坛'>名爵HS论坛</text>
+</view>
+
+
+</view>

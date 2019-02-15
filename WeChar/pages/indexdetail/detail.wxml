@@ -1,0 +1,13 @@
+<!--pages/indexdetail/detail.wxml-->
+<view>
+  <block wx:for="{{indexNewsPing}}" wx:key="{{item.ID}}">
+    <view class='head'>
+      <text>{{item.ANSERTITLE}}</text>
+    </view>
+    <view class="divLine"></view>
+    <view class='bady'>
+      <textarea class='tarea'>{{item.ANSERCONTENT}}</textarea>
+      <image src="{{item.ANSERIMG}}" class='tareaImage'></image>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,21 @@
+<view>
+  <text class='biaoti'>我的信息</text>
+</view>
+<text>\n\n</text>
+<view>
+  <image src='/image/tabBar9.PNG' class='tu'></image>
+  <image src='/image/tabBar10.PNG' class='tu'></image>
+</view>
+<view>
+  <text class='ziti1' bindtap='order'>我的订单</text>
+  <text class='ziti2' bindtap='intention'>我的意向车</text>
+</view>
+<text>\n\n\n</text>
+<view>
+  <image src='/image/tabBar11.PNG' class='tu'></image>
+  <image src='/image/tabBar12.PNG' class='tu'></image>
+</view>
+<view>
+  <text class='ziti1' bindtap='message'>我的消息</text>
+  <text class='ziti2' bindtap='history'>浏览历史</text>
+</view>

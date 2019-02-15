@@ -1,0 +1,16 @@
+<view>
+  <text class='biaoti'>我的消息</text>
+</view>
+<view>
+  <text>\n</text>
+</view>
+<view class='table1'>
+  <image src='/image/timg5.jpg' class='tu'></image>
+</view>
+<view class='table2'>
+  <text>\n</text>
+  <text class='zi1' bindtap='message'>消息助手</text>
+</view>
+<view class='table3'>
+  <text>汽车助手：发现新车出库</text>
+</view>

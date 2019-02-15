@@ -1,0 +1,15 @@
+<view>
+  <text class='biaoti'>我的消息</text>
+</view>
+<text>\n</text>
+<view class='view1'>
+ <text class='zi3'>1</text>
+ <text>\n</text>
+  <text class='zi1'>发现奥迪A6新车出库，性能强大功能齐全，退订回复TD</text>
+</view>
+<text>\n</text>
+<view class='view2'>
+  <text class='zi2'>5条回复</text>
+  <text>\n</text>
+  <text class='zi3'>1</text>
+</view>

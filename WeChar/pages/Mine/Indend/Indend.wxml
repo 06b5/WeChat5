@@ -1,0 +1,16 @@
+<view>
+  <text class='biaoti'>我的订单</text>
+</view>
+<view>
+  <text>\n</text>
+</view>
+<view class='table1'>
+  <image src='/image/timg1.jpg' class='tu'></image>
+</view>
+<view class='table2'>
+  <text class='zi1'>奥迪A3</text>
+  <text class='zi2'>20.6万</text>
+</view>
+<view class='table3'>
+<button bindtap='button'>详情</button>
+</view>

@@ -1,0 +1,11 @@
+/* pages/WorldAuto/WorldAuto.wxss */
+.img{
+  margin-top:40rpx;
+  width:100%;
+  height:320rpx;
+}
+.Line{
+  width:100%;
+  height:6rpx;
+  background-color: darkgray;
+}

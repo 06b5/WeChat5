@@ -1,0 +1,26 @@
+<!--pages/carforum/car_xi_forum/car_xi.wxml-->
+<!--车型论坛（车系）-->
+<text class='class_Ping'>{{title}}</text>
+<text>\n</text>
+<view class='shou'>A</view>
+<view class='car_mess_main'>
+  <image src='/image/car_biao/QQ截图20190124084119.png' class='car_biao'></image>
+  <text>\t</text>
+  <text class='car_name' bindtap='tobrandforum' data-brandname='奥迪'>奥迪</text>
+</view>
+<view class='shou'>B</view>
+<view class='car_mess_main'>
+  <image src='/image/car_biao/QQ截图20190124084129.png' class='car_biao'></image>
+  <text>\t</text>
+  <text class='car_name' bindtap='tobrandforum' data-brandname='宝沃'>宝沃</text>
+</view>
+<view class='car_mess_main'>
+  <image src='/image/car_biao/QQ截图20190124084151.png' class='car_biao'></image>
+  <text>\t</text>
+  <text class='car_name' bindtap='tobrandforum' data-brandname='奔驰'>奔驰</text>
+</view>
+<view class='car_mess_main'>
+  <image src='/image/car_biao/QQ截图20190124084201.png' class='car_biao'></image>
+  <text>\t</text>
+  <text class='car_name' bindtap='tobrandforum' data-brandname='宝马'>宝马</text>
+</view>

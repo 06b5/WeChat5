@@ -1,0 +1,25 @@
+<!--pages/carforum/brandforum/brandforuminfo/brandforuminfo.wxml-->
+<view class='forumMain'>
+  <view>
+    <text class='title'>{{addrname}}</text>
+  </view>
+  <text>\n</text>
+  <button bindtap='fatie' data-addrid='{{item.ID}}'>发帖</button>
+  <view class='content'>
+    <view class='contentInfo'>
+    <block wx:for="{{postlist}}" wx:key="{{item.ID}}">
+     <text bindtap='into' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+      <text>\n</text>
+      <text>\n</text>
+
+      <text class='backforum' >{{ansernum}}条回复</text>
+    
+    </block>
+     
+    </view>
+
+  </view>
+
+
+
+</view>

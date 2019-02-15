@@ -1,0 +1,33 @@
+<!--pages/rankinglist/rankinglist.wxml-->
+<view class='rankingbody'>
+  <image src='/image/timg1.jpg' class='imgbody'></image>
+  <view class='rankingtext'>
+    <text>奥迪A3</text>
+  </view>
+  <view class='rankingPrice'>
+    <text>20.00~26.00</text>
+  </view>
+</view>
+<view class='Line'></view>
+
+<view class='rankingbody'>
+  <image src='/image/timg2.jpg' class='imgbody'></image>
+  <view class='rankingtext'>
+    <text>奥迪A3</text>
+  </view>
+  <view class='rankingPrice'>
+    <text>20.00~26.00</text>
+  </view>
+</view>
+<view class='Line'></view>
+
+<view class='rankingbody'>
+  <image src='/image/timg3.jpg' class='imgbody'></image>
+  <view class='rankingtext'>
+    <text>奥迪A3</text>
+  </view>
+  <view class='rankingPrice'>
+    <text>20.00~26.00</text>
+  </view>
+</view>
+<view class='Line'></view>

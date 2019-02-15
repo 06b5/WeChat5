@@ -1,0 +1,51 @@
+/**index.wxss**/
+
+.slide-image {
+  width: 100%;
+  height: 340rpx;
+}
+
+.vv1 {
+  margin-top: 40rpx;
+}
+
+.navigationbar {
+  margin-top: 40rpx;
+  width: 100%;
+  height: 150rpx;
+}
+
+.btn1 {
+  width: 140rpx;
+  height: 140rpx;
+  float: left;
+  margin-left: 40rpx;
+  padding: 0;
+}
+
+.img1 {
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.navigationtext {
+  width: 100%;
+  height: 50rpx;
+}
+
+.text1 {
+  margin-left: 30rpx;
+  float: left;
+}
+
+.imgbady {
+  width: 100%;
+  height: 320rpx;
+}
+
+.divLine {
+  margin-top: 20rpx;
+  background: #e0e3da;
+  width: 100%;
+  height: 5rpx;
+}

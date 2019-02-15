@@ -1,0 +1,16 @@
+<view>
+  <text class='biaoti'>浏览历史</text>
+</view>
+<view>
+  <text>\n</text>
+</view>
+<view class='table1'>
+  <image src='/image/timg1.jpg' class='tu'></image>
+</view>
+<view class='table2'>
+  <text>\n</text>
+  <text class='zi1'>奥迪A3</text>
+</view>
+<view class='table3'>
+  <text class='zi2'>20.6万</text>
+</view>

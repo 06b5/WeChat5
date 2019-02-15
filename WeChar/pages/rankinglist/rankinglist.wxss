@@ -1,0 +1,25 @@
+/* pages/rankinglist/rankinglist.wxss */
+.rankingbody {
+  width: 100%;
+  height: 280rpx;
+  margin-top: 40rpx;
+}
+.imgbody {
+  width: 340rpx;
+  height: 260rpx;
+}
+.Line {
+  width: 100%;
+  height: 5rpx;
+  background-color: darkgray;
+}
+.rankingtext {
+  width: 130rpx;
+  margin-left: 450rpx;
+  margin-top: -200rpx;
+}
+.rankingPrice {
+  width: 240rpx;
+  margin-left: 400rpx;
+  margin-top: 80rpx;
+}

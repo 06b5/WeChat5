@@ -1,0 +1,42 @@
+.biaoti{
+  font-size: 80rpx;
+  margin-left: 200rpx;
+}
+
+.tu1{
+  width: 100%;
+}
+
+.zi1{
+  color: gray;
+}
+
+.zi2{
+  color:orangered;
+  font-size: 55rpx;
+}
+
+.zi3{
+  margin-left: 70rpx;
+  color: gray;
+}
+
+.zi4{
+  color: gray;
+  font-size: 30rpx;
+}
+
+.zi5{
+  color: gray;
+  font-size: 30rpx;
+  margin-left: 140rpx
+}
+
+.zi6{
+  color: orangered;
+}
+
+.zi7{
+  color: gray;
+  margin-left: 90rpx;
+}

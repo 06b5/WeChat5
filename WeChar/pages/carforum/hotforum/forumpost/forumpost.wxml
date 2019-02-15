@@ -1,0 +1,29 @@
+<!--pages/carforum/hotforum/hotforuminfo/forumpost/forumpost.wxml-->
+<view class='forumcontentmain'>
+   <view class='postblock'>
+      <text class='postname'>{{title}}</text>
+   </view>
+<text>\n</text>
+  <view class='postview'>
+<text>\n</text>
+<view>
+<textarea class='postcontent'>{{post}}</textarea>
+<image src='/image/timg.jpg' class='imgs'></image>
+<text>\n</text>
+</view>
+   </view>
+     <view class='postbottom'>     
+     <text class='fontstyle'>回复</text>  
+     </view>
+     
+     <view class='postname'>
+     <input class='repliescontent'>
+     <textarea>{{post}}</textarea>
+     </input>
+     <text>\n</text>
+     <button class='btnReplies' bindtap='Replies' type='primary'>回帖</button>
+     </view>
+
+
+
+</view>

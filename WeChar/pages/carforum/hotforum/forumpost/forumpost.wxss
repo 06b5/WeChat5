@@ -1,0 +1,37 @@
+/* pages/carforum/hotforum/hotforuminfo/forumpost/forumpost.wxss */
+.postname{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+}
+.fontstyle{
+  font-family: '微软雅黑';
+  font-size: 26rpx;
+}
+.postview{
+   border-top: 1px black solid;
+   
+}
+.postcontent{
+  margin-left: 40rpx
+}
+.imgs{
+  width: 900rpx;
+ 
+}
+.postbottom{
+   border-top: 1px black solid;
+   border-bottom: 1px black solid;
+}
+.repliescontent{
+  height: 300rpx;
+  border: 1px black solid;
+}
+.btnReplies{
+ width: 200rpx;
+ margin-left: 500rpx
+}

@@ -1,0 +1,53 @@
+<!--index.wxml-->
+<!--轮播图-->
+<view>
+  <view class='vv1'>
+    <swiper indicator-dots='{{indicatorDots}}' autoplay='true' interval='{{interval}}' duration='{{duration}}'>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src='{{item}}' class='slide-image'></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--导航按钮-->
+  <view class='navigationbar'>
+    <button class='btn1'>
+      <image src='/image/index1.png' class='img1'></image>
+    </button>
+    <button class='btn1'>
+      <image src='/image/index2.png' class='img1'></image>
+    </button>
+    <button class='btn1'>
+      <image src='/image/index3.png' class='img1'></image>
+    </button>
+    <button class='btn1'>
+      <image src='/image/index4.png' class='img1'></image>
+    </button>
+  </view>
+  <view class='navigationtext'>
+    <navigator url='/pages/allcars/allcarsindex/allcarsindex'>
+      <text class='text1'>车型大全</text>
+    </navigator>
+    <navigator url='/pages/rankinglist/rankinglist'>
+      <text class='text1'>热门排行</text>
+    </navigator>
+    <navigator url='/pages/WorldAuto/WorldAuto'>
+      <text class='text1'>名车鉴赏</text>
+    </navigator>
+    <navigator url='/pages/carforum/carforum/carforum'>
+      <text class='text1'>热门论坛</text>
+    </navigator>
+  </view>
+  <!-- 分割线-->
+  <view class="divLine"></view>
+  <!--新闻页-->
+  <view class='carbady'>
+    <block wx:for="{{indexNews}}" wx:key="{{item.ID}}">
+      <navigator url='/pages/indexdetail/detail?id={{item.ID}}'>
+        <text>{{item.NEWSCONTENT}} </text>
+      </navigator>
+      <image src="{{item.NEWSIMG}}" class='imgbady'></image>
+    </block>
+  </view>
+</view>

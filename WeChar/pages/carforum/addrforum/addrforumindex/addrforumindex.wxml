@@ -1,0 +1,13 @@
+<!--pages/addrforum/addrforum/addrforum.wxml-->
+<!--汽车论坛（地区）-->
+<view class='main'>
+  <text class='class_Ping'>{{title}}</text>
+  <text>\n</text>
+  <view class='shou'>A</view>
+  <block wx:for="{{addr}}" wx:key="item.ID">
+    <view class='addr_mess_main'>
+    <text>\t</text>
+    <text class='addr_name' bindtap='toaddrforum' data-addrname="{{item.AddrName}}" data-id="{{item.ID}}">{{item.AddrName}}</text>
+  </view>
+  </block>
+</view>

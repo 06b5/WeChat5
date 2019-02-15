@@ -1,0 +1,11 @@
+<!--pages/carforum/hotforum/hotforuminfo/forumpost/posting/posting.wxml-->
+<view class='forumHead'>
+<view><text class='title'>{{title}}</text></view>
+</view>
+<text>\n</text>
+<view class='content'>
+<text class='fontStyle'>标题</text><input class='postTitle'></input>
+<text>\n</text><text>\n</text>
+<text class='fontStyle'>内容</text><input class='postContent'></input>
+<button bindtap='fatie'>发帖</button>
+</view>

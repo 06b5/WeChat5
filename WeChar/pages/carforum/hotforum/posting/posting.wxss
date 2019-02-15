@@ -1,0 +1,28 @@
+/* pages/carforum/hotforum/hotforuminfo/forumpost/posting/posting.wxss */
+.forumHead{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  font-family: '微软雅黑';
+}
+.fontStyle{
+font-size: 28rpx;
+}
+.postTitle{
+  width: 680rpx;
+  border: 1px black solid;
+  float: right;
+  font-size: 28rpx;
+}
+.postContent{
+  width: 99%;
+  height: 400rpx;
+  border: 1px black solid;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+}

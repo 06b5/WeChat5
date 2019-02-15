@@ -1,0 +1,16 @@
+<!--pages/carforum/brandforum/brandforuminfo/brandforuminfo.wxml-->
+<view class='forumMain'>
+<view><text class='title'>{{title}}</text></view>
+<text>\n</text><button bindtap='fatie'>发帖</button>
+<view class='content'>
+<view class='contentInfo'>
+<text bindtap='into' data-posttitle="{{contentTitle}}">{{contentTitle}}</text>
+<text>\n</text><text>\n</text>
+<text class='backforum'>5条回复</text>
+</view>
+
+</view>
+
+
+
+</view>

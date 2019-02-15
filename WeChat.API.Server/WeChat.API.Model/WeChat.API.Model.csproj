@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DBC8CF64-81C5-4611-ADB4-AAE973CEFFC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WeChat.API.Model</RootNamespace>
+    <AssemblyName>WeChat.API.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AllCars\CarBrands.cs" />
+    <Compile Include="AllCars\CarMessage.cs" />
+    <Compile Include="Forum\AddrForum\Addr.cs" />
+    <Compile Include="Forum\AddrForum\AddrForum.cs" />
+    <Compile Include="Forum\AddrForum\AddrForumAnsers.cs" />
+    <Compile Include="Forum\BrandForum\Brand.cs" />
+    <Compile Include="Forum\BrandForum\BrandForum.cs" />
+    <Compile Include="Forum\BrandForum\BrandForumAnsers.cs" />
+    <Compile Include="Forum\HotForum\Hot.cs" />
+    <Compile Include="Forum\HotForum\HotForum.cs" />
+    <Compile Include="Forum\HotForum\HotForumAnsers.cs" />
+    <Compile Include="Forum\ThemeForuml\Theme.cs" />
+    <Compile Include="Forum\ThemeForuml\ThemeForum.cs" />
+    <Compile Include="Forum\ThemeForuml\ThemeForumAnsers.cs" />
+    <Compile Include="Index\IndexNews.cs" />
+    <Compile Include="Index\IndexNewsPing.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ranking\Topranking.cs" />
+    <Compile Include="User\MyMessage.cs" />
+    <Compile Include="User\MyShoppingList.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

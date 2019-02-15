@@ -1,0 +1,29 @@
+.biaoti{
+font-size: 80rpx;
+margin-left: 200rpx;
+}
+.tu{
+  width: 300rpx;
+  height: 300rpx;
+  margin-right:40rpx;
+  margin-left: 20rpx
+}
+.table1{
+  width: 302rpx;
+  height: 302rpx;
+  float: left
+}
+.table2{
+  width: 300rpx;
+  height: 200rpx;
+  float: right
+}
+.zi1{
+  margin-right: 60rpx;
+  font-size: 40rpx;
+}
+.table3{
+  width: 422rpx;
+  height: 302rpx;
+  float: right
+}
