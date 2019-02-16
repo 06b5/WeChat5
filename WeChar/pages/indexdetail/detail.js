@@ -15,7 +15,7 @@ Page({
     var that = this;
     console.log(options.id);
     wx.request({
-      url: 'http://localhost:56603/api/Index/showIndexNewsPing?id=' + options.id,
+      url: 'http://localhost:56603/api/Index/GetIndexNewsPing?Id=' + options.id,
       method: 'GET',
       success: function(res) {
         console.log(res.data)

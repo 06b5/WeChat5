@@ -43,11 +43,11 @@
   <view class="divLine"></view>
   <!--新闻页-->
   <view class='carbady'>
-    <block wx:for="{{indexNews}}" wx:key="{{item.ID}}">
-      <navigator url='/pages/indexdetail/detail?id={{item.ID}}'>
-        <text>{{item.NEWSCONTENT}} </text>
+    <block wx:for="{{indexNews}}" wx:key="{{item.Id}}">
+      <navigator url='/pages/indexdetail/detail?id={{item.Id}}'>
+        <text>{{item.NewScontent}} </text>
       </navigator>
-      <image src="{{item.NEWSIMG}}" class='imgbady'></image>
+      <image src="{{item.NewSimg}}" class='imgbady'></image>
     </block>
   </view>
 </view>

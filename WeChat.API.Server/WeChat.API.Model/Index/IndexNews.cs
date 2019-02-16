@@ -16,7 +16,7 @@ namespace WeChat.API.Model.Index
         /// <summary>
         /// 新闻标题
         /// </summary>
-        public string NesStitle { get; set; }
+        public string NewStitle { get; set; }
 
         /// <summary>
         /// 新闻图片
