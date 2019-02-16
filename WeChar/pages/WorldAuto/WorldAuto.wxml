@@ -1,21 +1,9 @@
 <!--pages/WorldAuto/WorldAuto.wxml-->
 <view>
-  <image src='/image/timg1.jpg' class='img'></image>
+  <block wx:for="{{carpistures}}" wx:key="{{item.Id}}">
+    <view>
+      <image src="{{item.Img}}" class='img'></image>
+    </view>
+    <view class='Line'></view>
+  </block>
 </view>
-<view class='Line'></view>
-<view>
-  <image src='/image/timg2.jpg' class='img'></image>
-</view>
-<view class='Line'></view>
-<view>
-  <image src='/image/timg3.jpg' class='img'></image>
-</view>
-<view class='Line'></view>
-<view>
-  <image src='/image/timg4.jpg' class='img'></image>
-</view>
-<view class='Line'></view>
-<view>
-  <image src='/image/timg5.jpg' class='img'></image>
-</view>
-<view class='Line'></view>
