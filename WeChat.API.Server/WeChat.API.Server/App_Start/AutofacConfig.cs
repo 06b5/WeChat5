@@ -44,11 +44,11 @@ namespace WeChat.API.Server.App_Start
         public static void SetUpd(ContainerBuilder container)
         {
             //首页新闻
-            container.RegisterType<indexNewsRespository>().As<IindexNewsRespository>();
+            container.RegisterType<IndexNewsRespository>().As<IindexNewsRespository>();
             //地区论坛
             container.RegisterType<AddrForumIndexRespository>().As<IAddrForumIndexRespository>();
             //首页新闻详情
-            container.RegisterType<indexNewsPingRespository>().As<IindexNewsPingRespository>();
+            container.RegisterType<IndexNewsPingRespository>().As<IindexNewsPingRespository>();
             //汽车排行
             container.RegisterType<ToprankingRespoistory>().As<ItoprankingRespository>();
         }

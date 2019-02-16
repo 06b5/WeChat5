@@ -13,7 +13,7 @@ using Dapper;
 
 namespace WeChat.API.Respository.IndexRespository
 {
-    public class indexNewsRespository : IindexNewsRespository
+    public class IndexNewsRespository : IindexNewsRespository
     {
         public static IDbConnection conn = new OracleConnection(ConfigurationManager.ConnectionStrings["OraclConn"].ToString());
         /// 实现首页新闻展示的接口

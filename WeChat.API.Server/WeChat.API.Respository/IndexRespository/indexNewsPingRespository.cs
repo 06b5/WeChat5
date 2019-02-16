@@ -12,7 +12,7 @@ using Oracle.DataAccess.Client;
 
 namespace WeChat.API.Respository.IndexRespository
 {
-    public class indexNewsPingRespository : IindexNewsPingRespository
+    public class IndexNewsPingRespository : IindexNewsPingRespository
     {
         public static IDbConnection conn = new OracleConnection(ConfigurationManager.ConnectionStrings["OraclConn"].ToString());
         /// <summary>
