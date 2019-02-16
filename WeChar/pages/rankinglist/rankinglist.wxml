@@ -1,11 +1,15 @@
 <!--pages/rankinglist/rankinglist.wxml-->
-<view class='rankingbody'>
-  <image src='/image/timg1.jpg' class='imgbody'></image>
-  <view class='rankingtext'>
-    <text>奥迪A3</text>
-  </view>
-  <view class='rankingPrice'>
-    <text>20.00~26.00</text>
-  </view>
+<view>
+  <block wx:for="{{topranking}}" wx:key="{{item.Id}}">
+    <view class='rankingbody'>
+      <image src="{{item.Img}}" class='imgbody'></image>
+      <view class='rankingtext'>
+        <text>{{item.Name}}</text>
+      </view>
+      <view class='rankingPrice'>
+        <text>{{item.Price}}</text>
+      </view>
+    </view>
+    <view class='Line'></view>
+  </block>
 </view>
-<view class='Line'></view>

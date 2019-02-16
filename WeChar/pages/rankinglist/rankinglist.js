@@ -15,7 +15,7 @@ Page({
     var than = this;
     wx.request({
       url: 'http://localhost:56603/api/topranking/GetTopranking',
-      method: '',
+      method: 'GET',
       success: function(res) {
         console.log(res.data)
         than.setData({
