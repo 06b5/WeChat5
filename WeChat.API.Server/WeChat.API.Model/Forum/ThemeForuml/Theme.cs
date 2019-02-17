@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace WeChat.API.Model.Forum.ThemeForum
 {
-    class Theme
+    public class Theme
     {
+        /// <summary>
+        /// 主题论坛主页主键
+        /// </summary>
+        public int ID { get; set; }
+
+        /// <summary>
+        /// 主题名称
+        /// </summary>
+        public string ThemeName { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace WeChat.API.Server.Controllers.Forum.AddrForums
 
         /// <summary>
         /// 查看帖子内容
-        /// </summary>
+        /// </summary>`
         /// <param name="Id"></param>
         /// <returns></returns>
         [HttpGet]

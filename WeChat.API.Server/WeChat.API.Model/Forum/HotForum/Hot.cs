@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace WeChat.API.Model.Forum.HotForum
 {
-    class Hot
+   public class Hot
     {
+        /// <summary>
+        /// 热门论坛主页主键
+        /// </summary>
+        public int ID { get; set; }
+
+        /// <summary>
+        /// 热门名称
+        /// </summary>
+        public string HotName { get; set; }
     }
 }

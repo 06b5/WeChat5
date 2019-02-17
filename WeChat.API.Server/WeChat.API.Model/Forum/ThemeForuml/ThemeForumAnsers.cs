@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace WeChat.API.Model.Forum.ThemeForum
 {
-    class ThemeForumAnsers
+    public class ThemeForumAnsers
     {
+        /// <summary>
+        /// 回帖主键
+        /// </summary>
+        public int ID { get; set; }
+
+        /// <summary>
+        /// 对应帖子ID
+        /// </summary>
+        public int ThemeForumID { get; set; }
+
+        /// <summary>
+        /// 回帖内容
+        /// </summary>
+        public string AnserContent { get; set; }
     }
 }
