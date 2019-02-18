@@ -6,7 +6,7 @@ Page({
    */
   data: {
     
-    contentTitle:'21岁开法拉利好不好'
+   
   },
 
   /**
@@ -14,9 +14,29 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      title: options.themename,
-
-    }) 
+      themename: options.themename + "论坛",
+    });
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/GetThemeForumList?themeId=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        that.setData({
+          postlist: data.data
+        })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/GetReplyNum?ThemeForumId=' + options.id,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          ansernum: res.data
+        })
+      }
+    });
   },
 
   /**
@@ -67,16 +87,17 @@ Page({
   onShareAppMessage: function () {
 
   },
-  into:function(e){
+  into: function (e) {
     var posttitle = e.currentTarget.dataset.posttitle;
+    var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/carforum/themeforum/forumpost/forumpost?posttitle=' + posttitle,
+      url: '/pages/carforum/themeforum/forumpost/forumpost?posttitle=' + posttitle + '&id=' + id,
     })
-    console.log(posttitle)
   },
-   fatie(event) {
+  fatie(event) {
+    var themeid = event.currentTarget.dataset.themeid;
     wx.navigateTo({
-      url: '/pages/carforum/themeforum/posting/posting',
+      url: '/pages/carforum/themeforum/posting/posting?themeid=' + themeid,
     })
   },
 })

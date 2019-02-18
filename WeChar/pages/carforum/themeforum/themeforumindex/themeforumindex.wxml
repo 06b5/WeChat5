@@ -1,29 +1,13 @@
 <!--pages/carforum/themeforum/themeforum.wxml-->
 <!--汽车论坛（主题）-->
 <view class='main'>
-<text class='class_Ping'>{{title}}</text>
-<text>\n</text>
-
-<view class='theme_mess_main'>
-<text>\t</text>
-<text class='theme_name' bindtap='tothemeforum' data-themename='精彩作业论坛'>精彩作业论坛</text>
-</view>
-<view class='theme_mess_main'>
-<text>\t</text>
-<text class='theme_name' bindtap='tothemeforum' data-themename='维修保养论坛'>维修保养论坛</text>
-</view>
-<view class='theme_mess_main'>
-<text>\t</text>
-<text class='theme_name' bindtap='tothemeforum' data-themename='装饰改装论坛'>装饰改装论坛</text>
-</view>
-<view class='theme_mess_main'>
-<text>\t</text>
-<text class='theme_name' bindtap='tothemeforum' data-themename='自驾游论坛'>自驾游论坛</text>
-</view>
-<view class='theme_mess_main'>
-<text>\t</text>
-<text class='theme_name' bindtap='tothemeforum' data-themename='摄影论坛'>摄影论坛</text>
-</view>
-
-
+  <text class='class_Ping'>{{title}}</text>
+  <text>\n</text>
+  <view class='shou'>A</view>
+  <block wx:for="{{theme}}" wx:key="item.ID">
+    <view class='theme_mess_main'>
+    <text>\t</text>
+    <text class='theme_name' bindtap='tothemeforum' data-themename="{{item.ThemeName}}" data-id="{{item.ID}}">{{item.themeName}}</text>
+  </view>
+  </block>
 </view>

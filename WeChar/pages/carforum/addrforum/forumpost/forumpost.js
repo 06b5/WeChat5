@@ -19,7 +19,7 @@ Page({
  
   var that=this;
     wx.request({
-      url: 'http://localhost:56603/api/AddrForumIndex/ShowPost?Id=' + options.id,
+      url: 'http://localhost:56603/api/AddrForumIndex/GetAddrForumLists?Id=' + options.id,
       method: 'GET',
       data: {},
       success: function (data) {
@@ -31,7 +31,7 @@ Page({
       }
     });
     wx.request({
-      url: 'http://localhost:56603/api/AddrForumIndex/LoadAnsers?AddrForumId=' + options.id,
+      url: 'http://localhost:56603/api/AddrForumIndex/GetAddrForumReplyList?addrForumId=' + options.id,
       method: 'GET',
       data: {},
       success: function (data) {
@@ -99,7 +99,7 @@ Page({
    
     var AddrForumid = event.currentTarget.dataset.addrforumid;
       wx.request({
-        url: 'http://localhost:56603/api/AddrForumIndex/Ansers',
+        url: 'http://localhost:56603/api/AddrForumIndex/AddReply',
         method: 'POST',
         data: {
           AddrForumID: AddrForumid,

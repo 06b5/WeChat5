@@ -6,7 +6,7 @@ Page({
    */
   data: {
     
-    contentTitle:'奥迪TT好不好开'
+
   },
 
   /**
@@ -17,6 +17,27 @@ Page({
       title: options.brandname +"论坛",
 
     }) 
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/BrandForumIndex/GetBrandForumList?brandId=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        that.setData({
+          postlist: data.data
+        })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/BrandForumIndex/GetReplyNum?brandForumId=' + options.id,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          ansernum: res.data
+        })
+      }
+    });
   },
 
   /**
@@ -67,15 +88,17 @@ Page({
   onShareAppMessage: function () {
 
   },
-  into:function(e){
-    var brandtitle = e.currentTarget.dataset.brandtitle;
+  into: function (e) {
+    var posttitle = e.currentTarget.dataset.posttitle;
+    var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/carforum/brandforum/forumpost/forumpost?brandtitle=' + brandtitle,
+      url: '/pages/carforum/brandforum/forumpost/forumpost?posttitle=' + posttitle + '&id=' + id,
     })
   },
-   fatie(event) {
+  fatie(event) {
+    var brandid = event.currentTarget.dataset.brandid;
     wx.navigateTo({
-      url: '/pages/carforum/brandforum/posting/posting',
+      url: '/pages/carforum/brandforum/posting/posting?brandid=' + brandid,
     })
   },
 })

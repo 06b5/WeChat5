@@ -5,16 +5,42 @@ Page({
    * 页面的初始数据
    */
   data: {
-    post: '解耦的是非得失发的搜救冻死就发的搜救哦你电视剧非三等奖哦ID刷飞机冻死防身大法是的范德萨冻死飞电风扇的说法',
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-        this.setData({
-          title: options.hottitle,
+    this.setData({
+      Title: options.posttitle,
+      forumid: options.id
+    })
+
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/GetHotForumLists?Id=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        console.log(data.PostTitle)
+        that.setData({
+          postcontent: data.data,
+
         })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/GetHotForumReplyList?hotForumId=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        that.setData({
+          getansers: data.data,
+
+        })
+      }
+    });
   },
 
   /**
@@ -64,5 +90,27 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  replies: function (event) {
+    var that = this;
+    var repliescontent = event.detail.value.repliescontent;
+
+    var hotForumid = event.currentTarget.dataset.hotforumid;
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/HotReply',
+      method: 'POST',
+      data: {
+        HotForumID: hotForumid,
+        AnserContent: repliescontent
+      },
+      success: function (data) {
+        wx.showToast({
+          title: '回复成功!'
+
+        })
+        that.onLoad();
+
+      }
+    })
   }
 })

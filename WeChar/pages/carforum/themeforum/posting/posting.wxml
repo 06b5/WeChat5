@@ -1,11 +1,13 @@
 <!--pages/carforum/brandforum/brandforuminfo/forumpost/posting/posting.wxml-->
+<form bindsubmit='posting' data-themeid='{{themeid}}'>
 <view class='forumHead'>
 <view><text class='title'>{{title}}</text></view>
 </view>
 <text>\n</text>
 <view class='content'>
-<text class='fontStyle'>标题</text><input class='postTitle'></input>
+<text class='fontStyle'>标题</text><input class='postTitle' name='postTitle' value='{{postTitle}}'></input>
 <text>\n</text><text>\n</text>
-<text class='fontStyle'>内容</text><input class='postContent'></input>
-<button bindtap='fatie'>发帖</button>
+<text class='fontStyle'>内容</text><input class='postContent' name='postContent' value='{{postContent}}'></input>
+<button  form-type='submit'>发帖</button>
 </view>
+</form>

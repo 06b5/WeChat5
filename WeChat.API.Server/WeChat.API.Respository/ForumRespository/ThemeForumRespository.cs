@@ -30,9 +30,9 @@ namespace WeChat.API.Respository
         /// 查看主题帖子
         /// </summary>
         /// <returns></returns>
-        public List<ThemeForum> GetThemeForumList(int ThemeId)
+        public List<ThemeForum> GetThemeForumList(int themeId)
         {
-            string sql = $"select * from Themeforum where ThemeId ={ThemeId}";
+            string sql = $"select * from Themeforum where ThemeId ={themeId}";
             var getThemeForumList = conn.Query<ThemeForum>(sql);
             return getThemeForumList.ToList();
         }
@@ -54,9 +54,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="ThemeForumId"></param>
         /// <returns></returns>
-        public int GetReplyNum(int ThemeForumId)
+        public int GetReplyNum(int themeForumId)
         {
-            string sql = $"select count(*) from Themeforumansers where ThemeForumId = {ThemeForumId}";
+            string sql = $"select count(*) from Themeforumansers where ThemeForumId = {themeForumId}";
             int i = Convert.ToInt32(conn.ExecuteScalar(sql));
             return i;
         }
@@ -66,9 +66,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="ThemeForumId"></param>
         /// <returns></returns>
-        public List<ThemeForumAnsers> GetThemeForumReplyList(int ThemeForumId)
+        public List<ThemeForumAnsers> GetThemeForumReplyList(int themeForumId)
         {
-            string sql = $"select * from Themeforumansers where ThemeForumId ={ThemeForumId}";
+            string sql = $"select * from Themeforumansers where ThemeForumId ={themeForumId}";
             var getThemeForumReplyList = conn.Query<ThemeForumAnsers>(sql);
             return getThemeForumReplyList.ToList();
         }
@@ -78,9 +78,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="Themeforum"></param>
         /// <returns></returns>
-        public int Add(ThemeForum Themeforum)
+        public int Add(ThemeForum themeforum)
         {
-            string sql = $"insert into Themeforum (ThemeId,PostTitle,PostContent,PostImgs) values (" + Themeforum.ThemeID + ",'" + Themeforum.PostTitle + "','" + Themeforum.PostContent + "','" + Themeforum.PostImgs + "')";
+            string sql = $"insert into Themeforum (ThemeId,PostTitle,PostContent,PostImgs) values (" + themeforum.ThemeID + ",'" + themeforum.PostTitle + "','" + themeforum.PostContent + "','" + themeforum.PostImgs + "')";
             var i = conn.Execute(sql);
             return i;
         }
@@ -90,9 +90,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="Themeforumansers"></param>
         /// <returns></returns>
-        public int ThemeReply(ThemeForumAnsers Themeforumansers)
+        public int ThemeReply(ThemeForumAnsers themeforumansers)
         {
-            string sql = $"insert into Themeforumansers (ThemeForumId,AnserContent) values (" + Themeforumansers.ThemeForumID + ",'" + Themeforumansers.AnserContent + "')";
+            string sql = $"insert into Themeforumansers (ThemeForumId,AnserContent) values (" + themeforumansers.ThemeForumID + ",'" + themeforumansers.AnserContent + "')";
             var i = conn.Execute(sql);
             return i;
         }

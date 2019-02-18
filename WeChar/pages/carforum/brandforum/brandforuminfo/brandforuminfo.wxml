@@ -1,16 +1,25 @@
 <!--pages/carforum/brandforum/brandforuminfo/brandforuminfo.wxml-->
 <view class='forumMain'>
   <view>
-    <text class='title'>{{title}}</text>
+    <text class='title'>{{brandname}}</text>
   </view>
   <text>\n</text>
-  <button bindtap='fatie'>发帖</button>
+  <button bindtap='fatie' data-brandid='{{item.ID}}'>发帖</button>
   <view class='content'>
     <view class='contentInfo'>
-      <text bindtap='into' data-brandtitle='{{contentTitle}}'>{{contentTitle}}</text>
+    <block wx:for="{{postlist}}" wx:key="{{item.ID}}">
+     <text bindtap='into' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
       <text>\n</text>
       <text>\n</text>
-      <text class='backforum'>5条回复</text>
+
+      <text class='backforum' >{{ansernum}}条回复</text>
+    
+    </block>
+     
     </view>
+
   </view>
+
+
+
 </view>

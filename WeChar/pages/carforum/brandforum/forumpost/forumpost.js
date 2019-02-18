@@ -13,9 +13,35 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     this.setData({
-       title:options.brandtitle
-     })
+    this.setData({
+      Title: options.posttitle,
+      forumid: options.id
+    })
+
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/BrandForumIndex/GetBrandForumLists?Id=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        console.log(data.PostTitle)
+        that.setData({
+          postcontent: data.data,
+
+        })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/BrandForumIndex/GetBrandForumReplyList?brandForumId=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        that.setData({
+          getansers: data.data,
+
+        })
+      }
+    });
   },
 
   /**
@@ -65,5 +91,27 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  replies: function (event) {
+    var that = this;
+    var repliescontent = event.detail.value.repliescontent;
+
+    var brandForumid = event.currentTarget.dataset.brandforumid;
+    wx.request({
+      url: 'http://localhost:56603/api/BrandForumIndex/BrandReply',
+      method: 'POST',
+      data: {
+        BrandForumID: brandForumid,
+        AnserContent: repliescontent
+      },
+      success: function (data) {
+        wx.showToast({
+          title: '回复成功!'
+
+        })
+        that.onLoad();
+
+      }
+    })
   }
 })
