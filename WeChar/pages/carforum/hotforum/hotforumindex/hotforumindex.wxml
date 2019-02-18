@@ -3,7 +3,6 @@
 <view class='main'>
   <text class='class_Ping'>{{title}}</text>
   <text>\n</text>
-  <view class='shou'>A</view>
   <block wx:for="{{hot}}" wx:key="item.ID">
     <view class='hot_mess_main'>
     <text>\t</text>

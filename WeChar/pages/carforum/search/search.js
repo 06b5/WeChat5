@@ -5,14 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    title: "汽车之家查询",
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      serechTitle: options.postTitle
+    })
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/AddrForumIndex/GetAddrForumListsByName',
+      method: 'GET',
+      data: { forumName:options.postTitle},
+      success: function (data) {
+        that.setData({
+          addrpostlist: data.data
+        })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/AddrForumIndex/GetReplyNum?addrForumId=' + options.id,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          addransernum: res.data
+        })
+      }
+    });
   },
 
   /**

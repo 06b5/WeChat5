@@ -1,1 +1,13 @@
 /* pages/carforum/search/search.wxss */
+.forum_title {
+  text-align: center;
+}
+.content{
+  height: 300rpx;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid
+}
+.contentInfo{
+  margin-left: 36rpx;
+  margin-top: 36rpx;
+} 

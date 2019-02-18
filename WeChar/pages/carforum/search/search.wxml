@@ -1,2 +1,59 @@
 <!--pages/carforum/search/search.wxml-->
-<text>pages/carforum/search/search.wxml</text>
+<view>
+  <view class='forum_title'>{{title}}</view>
+  <text>\n</text>
+  <text>\n</text>
+  <view>
+    <form bindsubmit='searchTitle'>
+      <view>
+        <input class='serech' name='serechTitle' value='{{serechTitle}}' placeholder='输入查询内容' ></input>
+        <button class='selbutton'>查询</button>
+      </view>
+    </form>
+  <text>\n</text>
+  <text>\n</text>
+    <view class='content'>
+    <view class='contentInfo'>
+    <block wx:for="{{addrpostlist}}" wx:key="{{item.ID}}">
+     <text bindtap='intoaddr' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+      <text>\n</text>
+      <text>\n</text>
+      <text class='backforum' >{{addransernum}}条回复</text>
+    </block>
+    </view>
+  </view>
+
+   <view class='content'>
+    <view class='contentInfo'>
+    <block wx:for="{{brandpostlist}}" wx:key="{{item.ID}}">
+     <text bindtap='intobrand' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+      <text>\n</text>
+      <text>\n</text>
+      <text class='backforum' >{{brandansernum}}条回复</text>
+    </block>
+    </view>
+  </view>
+
+     <view class='content'>
+    <view class='contentInfo'>
+    <block wx:for="{{hotpostlist}}" wx:key="{{item.ID}}">
+     <text bindtap='intohot' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+      <text>\n</text>
+      <text>\n</text>
+      <text class='backforum' >{{hotansernum}}条回复</text>
+    </block>
+    </view>
+  </view>
+
+     <view class='content'>
+    <view class='contentInfo'>
+    <block wx:for="{{themepostlist}}" wx:key="{{item.ID}}">
+     <text bindtap='intotheme' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+      <text>\n</text>
+      <text>\n</text>
+      <text class='backforum' >{{themeansernum}}条回复</text>
+    </block>
+    </view>
+  </view>
+  
+</view>
