@@ -21,8 +21,8 @@ namespace WeChat.API.Server.Controllers
         [HttpGet]
         public List<Topranking> GetTopranking()
         {
-            var itoprankingLit = itoprankingRespository.GetToprankings();
-            return itoprankingLit;
+            var toprankingLit = itoprankingRespository.GetToprankings();
+            return toprankingLit;
         }
     }
 }
