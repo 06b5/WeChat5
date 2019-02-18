@@ -39,8 +39,8 @@
     <Reference Include="Autofac.Integration.WebApi, Version=4.2.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.WebApi2.4.2.0\lib\net45\Autofac.Integration.WebApi.dll</HintPath>
     </Reference>
-    <Reference Include="Dapper, Version=1.50.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Dapper.1.50.7\lib\net451\Dapper.dll</HintPath>
+    <Reference Include="Dapper">
+      <HintPath>..\..\..\..\控件\Dapper.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
@@ -90,10 +90,10 @@
     <Compile Include="AllCarsRespository\BrandCarsRespository.cs" />
     <Compile Include="AllCarsRespository\CarBrandsRespository.cs" />
     <Compile Include="AllCarsRespository\CarMessageRespository.cs" />
-    <Compile Include="ForumRespository\AddrForumIndexRespository.cs" />
-    <Compile Include="ForumRespository\BrandForumIndexRespository.cs" />
-    <Compile Include="ForumRespository\HotForumIndexRespository.cs" />
-    <Compile Include="ForumRespository\ThemeForumIndexRespository.cs" />
+    <Compile Include="ForumRespository\AddrForumRespository.cs" />
+    <Compile Include="ForumRespository\BrandForumRespository.cs" />
+    <Compile Include="ForumRespository\HotForumRespository.cs" />
+    <Compile Include="ForumRespository\ThemeForumRespository.cs" />
     <Compile Include="IndexRespository\IndexNewsPingRespository.cs" />
     <Compile Include="IndexRespository\IndexNewsRespository.cs" />
     <Compile Include="PicturesRespository\CarPicturesRespository.cs" />

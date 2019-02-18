@@ -13,7 +13,7 @@ using Dapper;
 
 namespace WeChat.API.Respository
 {
-   public class AddrForumIndexRespository: IAddrForumIndexRespository
+   public class AddrForumRespository: IAddrForumRespository
     {
         public static IDbConnection conn = new OracleConnection(ConfigurationManager.ConnectionStrings["OraclConn"].ToString());
 

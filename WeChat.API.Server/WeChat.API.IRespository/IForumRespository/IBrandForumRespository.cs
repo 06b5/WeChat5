@@ -7,7 +7,7 @@ using WeChat.API.Model.Forum.BrandForum;
 
 namespace WeChat.API.IRespository
 {
-   public interface IBrandForumIndexRespository
+   public interface IBrandForumRespository
     {
         /// <summary>
         /// 车系列表展示

@@ -8,16 +8,12 @@ using System.Configuration;
 using Oracle.DataAccess.Client;
 using System.Data;
 using WeChat.API.Model.Forum.BrandForum;
-using WeChat.API.IRespository;
-using System.Configuration;
-using Oracle.DataAccess.Client;
-using System.Data;
 using Newtonsoft.Json;
 using Dapper;
 
 namespace WeChat.API.Respository
 {
-   public class BrandForumIndexRespository : IBrandForumIndexRespository
+   public class BrandForumRespository : IBrandForumRespository
     {
         public static IDbConnection conn = new OracleConnection(ConfigurationManager.ConnectionStrings["OraclConn"].ToString());
 

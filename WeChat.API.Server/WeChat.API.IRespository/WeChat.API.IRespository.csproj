@@ -47,9 +47,9 @@
     <Compile Include="IAllCarsRespository\ICarBrandsRespository.cs" />
     <Compile Include="IAllCarsRespository\ICarMessageRespository.cs" />
     <Compile Include="IForumRespository\IAddrForumRespository.cs" />
-    <Compile Include="IForumRespository\IBrandForumIndexRespository.cs" />
-    <Compile Include="IForumRespository\IHotForumIndexRespository.cs" />
-    <Compile Include="IForumRespository\IThemeForumIndexRespository.cs" />
+    <Compile Include="IForumRespository\IBrandForumRespository.cs" />
+    <Compile Include="IForumRespository\IHotForumRespository.cs" />
+    <Compile Include="IForumRespository\IThemeForumRespository.cs" />
     <Compile Include="IndexIRespository\IindexNewsRespository.cs" />
     <Compile Include="IndexIRespository\IindexNewsPingRespository.cs" />
     <Compile Include="IpicturesRespository\IcarPicturesRespository.cs" />

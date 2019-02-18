@@ -12,12 +12,10 @@ using WeChat.API.IRespository;
 using System.Configuration;
 using Oracle.DataAccess.Client;
 using System.Data;
-using Newtonsoft.Json;
-using Dapper;
-
+using Newtonsoft.Json
 namespace WeChat.API.Respository
 {
-   public class ThemeForumIndexRespository : IThemeForumIndexRespository
+   public class ThemeForumIndexRespository : IThemeForumRespository
     {
         public static IDbConnection conn = new OracleConnection(ConfigurationManager.ConnectionStrings["OraclConn"].ToString());
 

@@ -48,7 +48,13 @@ namespace WeChat.API.Server.App_Start
             //首页新闻
             container.RegisterType<IndexNewsRespository>().As<IindexNewsRespository>();
             //地区论坛
-            container.RegisterType<AddrForumIndexRespository>().As<IAddrForumIndexRespository>();
+            container.RegisterType<AddrForumRespository>().As<IAddrForumRespository>();
+            //车系论坛
+            container.RegisterType<BrandForumRespository>().As<IBrandForumRespository>();
+            //热门论坛
+            container.RegisterType<HotForumRespository>().As<IHotForumRespository>();
+            //主题论坛
+            container.RegisterType<ThemeForumRespository>().As<IThemeForumRespository>();
             //首页新闻详情
             container.RegisterType<IndexNewsPingRespository>().As<IindexNewsPingRespository>();
             //汽车排行

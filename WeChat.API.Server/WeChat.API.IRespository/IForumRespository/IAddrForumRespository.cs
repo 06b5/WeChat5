@@ -7,7 +7,7 @@ using WeChat.API.Model.Forum.AddrForum;
 
 namespace WeChat.API.IRespository
 {
-    public interface IAddrForumIndexRespository
+    public interface IAddrForumRespository
     {
         /// <summary>
         /// 地区列表展示
