@@ -30,9 +30,9 @@ namespace WeChat.API.Respository
         /// 查看热门帖子
         /// </summary>
         /// <returns></returns>
-        public List<HotForum> GetHotForumList(int HotId)
+        public List<HotForum> GetHotForumList(int hotId)
         {
-            string sql = $"select * from Hotforum where HotId ={HotId}";
+            string sql = $"select * from Hotforum where HotId ={hotId}";
             var getHotForumList = conn.Query<HotForum>(sql);
             return getHotForumList.ToList();
         }
@@ -54,9 +54,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="HotForumId"></param>
         /// <returns></returns>
-        public int GetReplyNum(int HotForumId)
+        public int GetReplyNum(int hotForumId)
         {
-            string sql = $"select count(*) from Hotforumansers where HotForumId = {HotForumId}";
+            string sql = $"select count(*) from Hotforumansers where HotForumId = {hotForumId}";
             int i = Convert.ToInt32(conn.ExecuteScalar(sql));
             return i;
         }
@@ -66,9 +66,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="HotForumId"></param>
         /// <returns></returns>
-        public List<HotForumAnsers> GetHotForumReplyList(int HotForumId)
+        public List<HotForumAnsers> GetHotForumReplyList(int hotForumId)
         {
-            string sql = $"select * from Hotforumansers where HotForumId ={HotForumId}";
+            string sql = $"select * from Hotforumansers where HotForumId ={hotForumId}";
             var getHotForumReplyList = conn.Query<HotForumAnsers>(sql);
             return getHotForumReplyList.ToList();
         }
@@ -78,9 +78,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="Hotforum"></param>
         /// <returns></returns>
-        public int Add(HotForum Hotforum)
+        public int Add(HotForum hotforum)
         {
-            string sql = $"insert into Hotforum (HotId,PostTitle,PostContent,PostImgs) values (" + Hotforum.HotID + ",'" + Hotforum.PostTitle + "','" + Hotforum.PostContent + "','" + Hotforum.PostImgs + "')";
+            string sql = $"insert into Hotforum (HotId,PostTitle,PostContent,PostImgs) values (" + hotforum.HotID + ",'" + hotforum.PostTitle + "','" + hotforum.PostContent + "','" + hotforum.PostImgs + "')";
             var i = conn.Execute(sql);
             return i;
         }
@@ -90,9 +90,9 @@ namespace WeChat.API.Respository
         /// </summary>
         /// <param name="Hotforumansers"></param>
         /// <returns></returns>
-        public int HotReply(HotForumAnsers Hotforumansers)
+        public int HotReply(HotForumAnsers hotforumansers)
         {
-            string sql = $"insert into Hotforumansers (HotForumId,AnserContent) values (" + Hotforumansers.HotForumID + ",'" + Hotforumansers.AnserContent + "')";
+            string sql = $"insert into Hotforumansers (HotForumId,AnserContent) values (" + hotforumansers.HotForumID + ",'" + hotforumansers.AnserContent + "')";
             var i = conn.Execute(sql);
             return i;
         }
