@@ -67,6 +67,8 @@ namespace WeChat.API.Server.App_Start
             container.RegisterType<CarBrandsRespository>().As<IcarbrandsRespository>();
             //汽车品牌下的详细车辆
             container.RegisterType<BranCarsRespository>().As<IbranCarsRespository>();
+            //展示汽车详情
+            container.RegisterType<CarMessageRespository>().As<IcarMessageRespositpry>();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace WeChat.API.Server.Controllers
     {
         public IcarbrandsRespository icarbrandsRespository { get; set; }
         public IbranCarsRespository ibranCarsRespository { get; set; }
-
+        public IcarMessageRespositpry icarMessageRespositpry { get; set; }
         /// <summary>
         /// 查询汽车品牌
         /// </summary>
@@ -36,6 +36,18 @@ namespace WeChat.API.Server.Controllers
         {
             var brancarsList = ibranCarsRespository.GetbranCars(id);
             return brancarsList;
+        }
+
+        /// <summary>
+        /// 显示汽车的详细信息
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<CarMessage> GetCarMessages(int id)
+        {
+            var carMessagesList = icarMessageRespositpry.GetCarMessages(id);
+            return carMessagesList;
         }
     }
 }
