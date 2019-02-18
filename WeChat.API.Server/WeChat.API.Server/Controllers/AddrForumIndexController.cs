@@ -11,7 +11,7 @@ namespace WeChat.API.Server.Controllers.Forum.AddrForums
 {
     public class AddrForumIndexController : ApiController
     {
-        public IAddrForumIndexRespository AddrForumIndexIRespository { get; set; }
+        public IAddrForumRespository AddrForumIndexIRespository { get; set; }
 
         /// <summary>
         /// 地区论坛首页地区列表

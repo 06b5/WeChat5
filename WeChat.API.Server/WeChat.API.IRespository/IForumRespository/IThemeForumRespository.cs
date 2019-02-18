@@ -7,7 +7,7 @@ using WeChat.API.Model.Forum.ThemeForum;
 
 namespace WeChat.API.IRespository
 {
-   public interface IThemeForumIndexRespository
+   public interface IThemeForumRespository
     {
         /// <summary>
         /// 主题列表展示

@@ -7,7 +7,7 @@ using WeChat.API.Model.Forum.HotForum;
 
 namespace WeChat.API.IRespository
 {
-   public interface IHotForumIndexRespository
+   public interface IHotForumRespository
     {
         /// <summary>
         /// 热门列表展示
