@@ -43,11 +43,19 @@ namespace WeChat.API.IRespository
         List<AddrForumAnsers> GetAddrForumReplyList(int addrForumId);
 
         /// <summary>
+        /// 根据标题查询地区论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        List<AddrForum> GetAddrForumListsByName(string forumName);
+
+        /// <summary>
         /// 在地区论坛发帖
         /// </summary>
         /// <param name="addrforum"></param>
         /// <returns></returns>
         int Add(AddrForum addrforum);
+
         /// <summary>
         /// 回帖
         /// </summary>

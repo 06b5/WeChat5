@@ -72,6 +72,18 @@ namespace WeChat.API.Server.Controllers
         }
 
         /// <summary>
+        /// 根据标题查询车系论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<BrandForum> GetBrandForumListsByName(string forumName)
+        {
+            var getBrandForumList = BrandForumIndexIRespository.GetBrandForumListsByName(forumName);
+            return getBrandForumList;
+        }
+
+        /// <summary>
         /// 在车系论坛发帖
         /// </summary>
         /// <param name="brandforum"></param>

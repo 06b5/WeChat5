@@ -44,7 +44,7 @@ namespace WeChat.API.Respository
         /// <returns></returns>
         public List<BrandForum> GetBrandForumLists(int id)
         {
-            string sql = $"select * from Brandforum where Id ={id}";
+            string sql = $"select Brandforum.*,Brand.BrandName from Brandforum join Brand on Brandforum.addrid=Brand.ID where Brandforum.Id ={id}";
             var getBrandForumLists = conn.Query<BrandForum>(sql);
             return getBrandForumLists.ToList();
         }
@@ -71,6 +71,18 @@ namespace WeChat.API.Respository
             string sql = $"select * from Brandforumansers where BrandForumId ={BrandForumId}";
             var getBrandForumReplyList = conn.Query<BrandForumAnsers>(sql);
             return getBrandForumReplyList.ToList();
+        }
+
+        /// <summary>
+        /// 根据标题查询车系论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        public List<BrandForum> GetBrandForumListsByName(string forumName)
+        {
+            string sql = $"select Brandforum.*,Brand.BrandName from Brandforum join Brand on Brandforum.addrid=Brand.ID where Brandforum.posttitle like '%{forumName}%'";
+            var getBrandForumList = conn.Query<BrandForum>(sql);
+            return getBrandForumList.ToList();
         }
 
         /// <summary>

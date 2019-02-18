@@ -31,7 +31,8 @@
     "pages/Mine/Intention/Intention",
     "pages/Mine/History/History",
     "pages/rankinglist/rankinglist",
-    "pages/WorldAuto/WorldAuto"
+    "pages/WorldAuto/WorldAuto",
+    "pages/carforum/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
