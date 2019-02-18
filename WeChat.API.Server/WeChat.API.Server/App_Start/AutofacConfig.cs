@@ -7,9 +7,11 @@ using Autofac;
 using WeChat.API.IRespository.IndexIRespository;
 using WeChat.API.IRespository.RankingIRespository;
 using WeChat.API.IRespository.IpicturesRespository;
+using WeChat.API.IRespository.IbrandRespository;
 using WeChat.API.Respository.IndexRespository;
 using WeChat.API.Respository.RankingRespoistory;
 using WeChat.API.Respository.PicturesRespository;
+using WeChat.API.Respository.BrandRespository;
 using Autofac.Integration.WebApi;
 using System.Reflection;
 using System.Web.Http;
@@ -61,6 +63,10 @@ namespace WeChat.API.Server.App_Start
             container.RegisterType<ToprankingRespoistory>().As<ItoprankingRespository>();
             //汽车图片
             container.RegisterType<CarPicturesRespository>().As<IcarPicturesRespository>();
+            //汽车品牌
+            container.RegisterType<CarBrandsRespository>().As<IcarbrandsRespository>();
+            //汽车品牌下的详细车辆
+            container.RegisterType<BranCarsRespository>().As<IbranCarsRespository>();
         }
     }
 }
