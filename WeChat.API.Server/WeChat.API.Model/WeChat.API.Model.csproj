@@ -42,6 +42,8 @@
   <ItemGroup>
     <Compile Include="AllCars\CarBrands.cs" />
     <Compile Include="AllCars\CarMessage.cs" />
+    <Compile Include="brand\Brancars.cs" />
+    <Compile Include="brand\Carbrands.cs" />
     <Compile Include="Forum\AddrForum\Addr.cs" />
     <Compile Include="Forum\AddrForum\AddrForum.cs" />
     <Compile Include="Forum\AddrForum\AddrForumAnsers.cs" />
