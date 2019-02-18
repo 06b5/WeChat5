@@ -5,7 +5,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-    contentTitle: '没驾照开车开心啊！'
   },
 
   /**
@@ -13,8 +12,29 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      title: options.hotname,
+      title: options.hotname + "论坛",
     })
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/GetHotForumList?hotId=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        that.setData({
+          postlist: data.data
+        })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/GetReplyNum?hotForumId=' + options.id,
+      method: 'GET',
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          ansernum: res.data
+        })
+      }
+    });
   },
 
   /**
@@ -66,14 +86,16 @@ Page({
 
   },
   into: function (e) {
-    var hottitle = e.currentTarget.dataset.hottitle;
+    var posttitle = e.currentTarget.dataset.posttitle;
+    var id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '/pages/carforum/hotforum/forumpost/forumpost?hottitle=' + hottitle,
+      url: '/pages/carforum/hotforum/forumpost/forumpost?posttitle=' + posttitle + '&id=' + id,
     })
   },
   fatie(event) {
+    var hotid = event.currentTarget.dataset.hotid;
     wx.navigateTo({
-      url: '/pages/carforum/brandforum/posting/posting',
+      url: '/pages/carforum/hotforum/posting/posting?hotid=' + hotid,
     })
   },
 })

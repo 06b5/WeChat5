@@ -12,7 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      themeid: options.themeid
+    })
+    console.log(themeid)
   },
 
   /**
@@ -62,5 +65,31 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  posting: function (event) {
+    var that = this;
+    var themeid = event.currentTarget.dataset.themeid;
+    var postTitle = event.detail.value.postTitle;
+    var postContent = event.detail.value.postContent;
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/Add',
+      method: 'POST',
+      data: {
+        ThemeID: themeid,
+        PostTitle: postTitle,
+        PostContent: postContent,
+        PostImgs: null
+      },
+      success: function (data) {
+        wx.showToast({
+          title: '发帖成功!'
+
+        })
+        that.onLoad();
+      },
+      fail: function (data) {
+        console.log(data)
+      }
+    })
+  },
 })

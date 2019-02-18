@@ -1,15 +1,24 @@
 <!--pages/carforum/hotforum/hotforuminfo/hotforuminfo.wxml-->
 <view class='forumMain'>
-<view><text class='title'>{{title}}</text></view>
-<text>\n</text><button bindtap='fatie'>发帖</button>
-<view class='content'>
-<view class='contentInfo'>
-<text bindtap='into' data-hottitle='{{contentTitle}}'>{{contentTitle}}</text>
-<text>\n</text><text>\n</text>
-<text class='backforum'>5条回复</text>
-</view>
+  <view>
+    <text class='title'>{{hotname}}</text>
+  </view>
+  <text>\n</text>
+  <button bindtap='fatie' data-hotid='{{item.ID}}'>发帖</button>
+  <view class='content'>
+    <view class='contentInfo'>
+    <block wx:for="{{postlist}}" wx:key="{{item.ID}}">
+     <text bindtap='into' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+      <text>\n</text>
+      <text>\n</text>
 
-</view>
+      <text class='backforum' >{{ansernum}}条回复</text>
+    
+    </block>
+     
+    </view>
+
+  </view>
 
 
 

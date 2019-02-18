@@ -12,7 +12,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
 
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/HotLists',
+      method: 'GET',
+      success: function (data) {
+        console.log(data.data)
+        that.setData({
+          hot: data.data
+        })
+      }
+    })
   },
 
   /**
@@ -65,8 +76,10 @@ Page({
   },
   tohotforum: function (e) {
     var hotname = e.currentTarget.dataset.hotname;
+    var id = e.currentTarget.dataset.id;
+    console.log(hotname);
     wx.navigateTo({
-      url: '/pages/carforum/hotforum/hotforuminfo/hotforuminfo?hotname=' + hotname,
+      url: '/pages/carforum/hotforum/hotforuminfo/hotforuminfo?hotname=' + hotname + '&id=' + id,
     })
   },
 })

@@ -12,7 +12,9 @@ using WeChat.API.IRespository;
 using System.Configuration;
 using Oracle.DataAccess.Client;
 using System.Data;
-using Newtonsoft.Json
+using Newtonsoft.Json;
+using Dapper;
+
 namespace WeChat.API.Respository
 {
    public class ThemeForumIndexRespository : IThemeForumRespository

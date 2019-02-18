@@ -18,7 +18,7 @@ Page({
     });
    var that=this;
    wx.request({
-     url: 'http://localhost:56603/api/AddrForumIndex/AddrForumPosts?AddrId=' + options.id,
+     url: 'http://localhost:56603/api/AddrForumIndex/GetAddrForumList?addrId=' + options.id,
      method:'GET',
      data: {},
      success:function(data){
@@ -28,7 +28,7 @@ Page({
      }
    });
     wx.request({
-      url: 'http://localhost:56603/api/AddrForumIndex/AnserNum?AddrForumId=' + options.id,
+      url: 'http://localhost:56603/api/AddrForumIndex/GetReplyNum?addrForumId=' + options.id,
       method: 'GET',
       success: function (res) {
         console.log(res.data);
