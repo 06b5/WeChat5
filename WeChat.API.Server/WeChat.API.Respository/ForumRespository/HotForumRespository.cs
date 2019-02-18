@@ -44,7 +44,7 @@ namespace WeChat.API.Respository
         /// <returns></returns>
         public List<HotForum> GetHotForumLists(int id)
         {
-            string sql = $"select * from Hotforum where Id ={id}";
+            string sql = $"select Hotforum.*,Hot.HotName from Hotforum join hot on Hotforum.hotid=hot.ID where Hotforum.Id ={id}";
             var getHotForumLists = conn.Query<HotForum>(sql);
             return getHotForumLists.ToList();
         }
@@ -71,6 +71,18 @@ namespace WeChat.API.Respository
             string sql = $"select * from Hotforumansers where HotForumId ={hotForumId}";
             var getHotForumReplyList = conn.Query<HotForumAnsers>(sql);
             return getHotForumReplyList.ToList();
+        }
+
+        /// <summary>
+        /// 根据标题查询热门论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        public List<HotForum> GetHotForumListsByName(string forumName)
+        {
+            string sql = $"select HotForum.*,Hot.HotName from HotForum join hot on Hotforum.hotid=hot.ID where HotForum.posttitle like '%{forumName}%'";
+            var getHotForumList = conn.Query<HotForum>(sql);
+            return getHotForumList.ToList();
         }
 
         /// <summary>

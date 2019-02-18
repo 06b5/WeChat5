@@ -19,7 +19,7 @@ namespace WeChat.API.IRespository
         /// 对应车系论坛帖子展示
         /// </summary>
         /// <returns></returns>
-        List<BrandForum> GetBrandForumList(int BrandId);
+        List<BrandForum> GetBrandForumList(int brandId);
 
         /// <summary>
         /// 查看帖子内容
@@ -31,28 +31,36 @@ namespace WeChat.API.IRespository
         /// <summary>
         /// 显示回帖数
         /// </summary>
-        /// <param name="BrandForumId"></param>
+        /// <param name="brandForumId"></param>
         /// <returns></returns>
-        int GetReplyNum(int BrandForumId);
+        int GetReplyNum(int brandForumId);
 
         /// <summary>
         /// 帖子对应评论
         /// </summary>
-        /// <param name="BrandForumId"></param>
+        /// <param name="brandForumId"></param>
         /// <returns></returns>
-        List<BrandForumAnsers> GetBrandForumReplyList(int BrandForumId);
+        List<BrandForumAnsers> GetBrandForumReplyList(int brandForumId);
+
+        /// <summary>
+        /// 根据标题查询主题论坛帖子
+        /// </summary>
+        /// <param name="IdforumName></param>
+        /// <returns></returns>
+        List<BrandForum> GetBrandForumListsByName(string forumName);
 
         /// <summary>
         /// 在车系论坛发帖
         /// </summary>
-        /// <param name="Brandforum"></param>
+        /// <param name="brandforum"></param>
         /// <returns></returns>
-        int Add(BrandForum Brandforum);
+        int Add(BrandForum brandforum);
+
         /// <summary>
         /// 回帖
         /// </summary>
-        /// <param name="Brandforumansers"></param>
+        /// <param name="brandforumansers"></param>
         /// <returns></returns>
-        int BrandReply(BrandForumAnsers Brandforumansers);
+        int BrandReply(BrandForumAnsers brandforumansers);
     }
 }

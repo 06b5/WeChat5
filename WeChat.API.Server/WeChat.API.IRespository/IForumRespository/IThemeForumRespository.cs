@@ -19,7 +19,7 @@ namespace WeChat.API.IRespository
         /// 对应主题论坛帖子展示
         /// </summary>
         /// <returns></returns>
-        List<ThemeForum> GetThemeForumList(int ThemeId);
+        List<ThemeForum> GetThemeForumList(int themeId);
 
         /// <summary>
         /// 查看帖子内容
@@ -31,28 +31,36 @@ namespace WeChat.API.IRespository
         /// <summary>
         /// 显示回帖数
         /// </summary>
-        /// <param name="ThemeForumId"></param>
+        /// <param name="themeForumId"></param>
         /// <returns></returns>
-        int GetReplyNum(int ThemeForumId);
+        int GetReplyNum(int themeForumId);
 
         /// <summary>
         /// 帖子对应评论
         /// </summary>
-        /// <param name="ThemeForumId"></param>
+        /// <param name="themeForumId"></param>
         /// <returns></returns>
-        List<ThemeForumAnsers> GetThemeForumReplyList(int ThemeForumId);
+        List<ThemeForumAnsers> GetThemeForumReplyList(int themeForumId);
+
+        /// <summary>
+        /// 根据标题查询主题论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        List<ThemeForum> GetThemeForumListsByName(string forumName);
 
         /// <summary>
         /// 在主题论坛发帖
         /// </summary>
-        /// <param name="Themeforum"></param>
+        /// <param name="themeforum"></param>
         /// <returns></returns>
-        int Add(ThemeForum Themeforum);
+        int Add(ThemeForum themeforum);
+
         /// <summary>
         /// 回帖
         /// </summary>
-        /// <param name="Themeforumansers"></param>
+        /// <param name="themeforumansers"></param>
         /// <returns></returns>
-        int ThemeReply(ThemeForumAnsers Themeforumansers);
+        int ThemeReply(ThemeForumAnsers themeforumansers);
     }
 }

@@ -19,40 +19,48 @@ namespace WeChat.API.IRespository
         /// 对应热门论坛帖子展示
         /// </summary>
         /// <returns></returns>
-        List<HotForum> GetHotForumList(int HotId);
+        List<HotForum> GetHotForumList(int hotId);
 
         /// <summary>
         /// 查看帖子内容
         /// </summary>
-        /// <param name="Id"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
         List<HotForum> GetHotForumLists(int id);
 
         /// <summary>
         /// 显示回帖数
         /// </summary>
-        /// <param name="HotForumId"></param>
+        /// <param name="hotForumId"></param>
         /// <returns></returns>
-        int GetReplyNum(int HotForumId);
+        int GetReplyNum(int hotForumId);
 
         /// <summary>
         /// 帖子对应评论
         /// </summary>
-        /// <param name="HotForumId"></param>
+        /// <param name="hotForumId"></param>
         /// <returns></returns>
-        List<HotForumAnsers> GetHotForumReplyList(int HotForumId);
+        List<HotForumAnsers> GetHotForumReplyList(int hotForumId);
+
+        /// <summary>
+        /// 根据标题查询热门论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        List<HotForum> GetHotForumListsByName(string forumName);
 
         /// <summary>
         /// 在热门论坛发帖
         /// </summary>
-        /// <param name="Hotforum"></param>
+        /// <param name="hotforum"></param>
         /// <returns></returns>
         int Add(HotForum Hotforum);
+
         /// <summary>
         /// 回帖
         /// </summary>
-        /// <param name="Hotforumansers"></param>
+        /// <param name="hotforumansers"></param>
         /// <returns></returns>
-        int HotReply(HotForumAnsers Hotforumansers);
+        int HotReply(HotForumAnsers hotforumansers);
     }
 }

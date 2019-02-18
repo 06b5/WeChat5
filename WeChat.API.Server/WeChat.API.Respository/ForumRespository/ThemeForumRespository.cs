@@ -44,7 +44,7 @@ namespace WeChat.API.Respository
         /// <returns></returns>
         public List<ThemeForum> GetThemeForumLists(int id)
         {
-            string sql = $"select * from Themeforum where Id ={id}";
+            string sql = $"select Themeforum.*,theme.ThemeName from Themeforum join theme on Themeforum.themeid=theme.ID where Themeforum.Id ={id}";
             var getThemeForumLists = conn.Query<ThemeForum>(sql);
             return getThemeForumLists.ToList();
         }
@@ -71,6 +71,18 @@ namespace WeChat.API.Respository
             string sql = $"select * from Themeforumansers where ThemeForumId ={themeForumId}";
             var getThemeForumReplyList = conn.Query<ThemeForumAnsers>(sql);
             return getThemeForumReplyList.ToList();
+        }
+
+        /// <summary>
+        /// 根据标题查询主题论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        public List<ThemeForum> GetThemeForumListsByName(string forumName)
+        {
+            string sql = $"select * from ThemeForum join theme on Themeforum.themeid=theme.ID where ThemeForum.posttitle like '%{forumName}%'";
+            var getThemeForumList = conn.Query<ThemeForum>(sql);
+            return getThemeForumList.ToList();
         }
 
         /// <summary>
