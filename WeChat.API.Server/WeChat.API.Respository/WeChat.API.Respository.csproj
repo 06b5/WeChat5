@@ -92,6 +92,7 @@
     <Compile Include="BrandRespository\BranCarsRespository.cs" />
     <Compile Include="BrandRespository\CarBrandsRespository.cs" />
     <Compile Include="BrandRespository\CarMessageRespository.cs" />
+    <Compile Include="BrandRespository\CarSeriesRespository.cs" />
     <Compile Include="ForumRespository\AddrForumRespository.cs" />
     <Compile Include="ForumRespository\BrandForumRespository.cs" />
     <Compile Include="ForumRespository\HotForumRespository.cs" />

@@ -81,8 +81,5 @@ Page({
   },
 
   specification(event) {
-    wx.navigateTo({
-      url: '/pages/allcars/Specification/Specification',
-    })
   }
 })
