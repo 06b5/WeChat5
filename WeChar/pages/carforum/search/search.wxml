@@ -18,6 +18,8 @@
      <text bindtap='intoaddr' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
       <text>\n</text>
       <text>\n</text>
+      <text class='backforum' >{{item.AddrName}}论坛</text>
+      <text>\t</text>
       <text class='backforum' >{{addransernum}}条回复</text>
     </block>
     </view>
@@ -29,6 +31,8 @@
      <text bindtap='intobrand' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
       <text>\n</text>
       <text>\n</text>
+      <text class='backforum' >{{item.BrandName}}论坛</text>
+      <text>\t</text>
       <text class='backforum' >{{brandansernum}}条回复</text>
     </block>
     </view>
@@ -40,6 +44,8 @@
      <text bindtap='intohot' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
       <text>\n</text>
       <text>\n</text>
+      <text class='backforum' >{{item.HotName}}论坛</text>
+      <text>\t</text>
       <text class='backforum' >{{hotansernum}}条回复</text>
     </block>
     </view>
@@ -51,9 +57,12 @@
      <text bindtap='intotheme' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
       <text>\n</text>
       <text>\n</text>
+      <text class='backforum' >{{item.ThemeName}}论坛</text>
+      <text>\t</text>
       <text class='backforum' >{{themeansernum}}条回复</text>
     </block>
     </view>
   </view>
   
+</view>
 </view>
