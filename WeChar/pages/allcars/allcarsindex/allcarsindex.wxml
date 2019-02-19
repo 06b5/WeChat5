@@ -3,33 +3,21 @@
 <view class='class_Ping'>
   <text>{{title}}</text>
 </view>
-<text>\n</text>
-<text class='chioe' bindtap='chioecar' data-cartype='0'>选车</text>
-<text>\t</text>
-<text class='chioe' bindtap='newenergy' data-cartype='0'>新能源</text>
-<text>\t</text>
-<text class='chioe' bindtap='ershou' data-cartype='0'>二手</text>
-<text>\n</text>
-<text>\n</text>
-<view class='shou'>A</view>
-<view class='car_mess_main'>
-  <image src='/image/car_biao/QQ截图20190124084119.png' class='car_biao'></image>
-  <text>\t</text>
-  <text class='car_name' bindtap='tobrandforum' data-brandname='奥迪'>奥迪</text>
+<view>
+  <input type='text'></input>
+  <button>搜索</button>
 </view>
-<view class='shou'>B</view>
-<view class='car_mess_main'>
-  <image src='/image/car_biao/QQ截图20190124084129.png' class='car_biao'></image>
-  <text>\t</text>
-  <text class='car_name' bindtap='tobrandforum' data-brandname='宝沃'>宝沃</text>
-</view>
-<view class='car_mess_main'>
-  <image src='/image/car_biao/QQ截图20190124084151.png' class='car_biao'></image>
-  <text>\t</text>
-  <text class='car_name' bindtap='tobrandforum' data-brandname='奔驰'>奔驰</text>
-</view>
-<view class='car_mess_main'>
-  <image src='/image/car_biao/QQ截图20190124084201.png' class='car_biao'></image>
-  <text>\t</text>
-  <text class='car_name' bindtap='tobrandforum' data-brandname='宝马'>宝马</text>
+<text>\n</text>
+<view>
+  <block wx:for="{{carbrans}}" wx:key="{{item.Id}}">
+    <view class='car_mess_main'>
+      <image src='{{item.BrandImg}}' class='car_biao'></image>
+      <text>\t</text>
+      <navigator url='/pages/allcars/Choice/Choice?Id={{item.Id}}'>
+        <text class='car_name' bindtap='tobrandforum'>
+      {{item.BrandName}}
+      </text>
+      </navigator>
+    </view>
+  </block>
 </view>

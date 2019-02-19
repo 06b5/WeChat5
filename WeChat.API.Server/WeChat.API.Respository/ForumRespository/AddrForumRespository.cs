@@ -44,7 +44,7 @@ namespace WeChat.API.Respository
         /// <returns></returns>
        public List<AddrForum> GetAddrForumLists(int id)
         {
-            string sql = $"select * from addrforum where Id ={id}";
+            string sql = $"select addrforum.*,addr.AddrName from addrforum join addr on addrforum.addrid=addr.ID where addrforum.Id ={id}";
             var getAddrForumLists = conn.Query<AddrForum>(sql);
             return getAddrForumLists.ToList();
         }
@@ -72,6 +72,18 @@ namespace WeChat.API.Respository
             var getAddrForumReplyList = conn.Query<AddrForumAnsers>(sql);
             return getAddrForumReplyList.ToList();
         }
+
+        /// <summary>
+        /// 根据标题查询地区论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+       public List<AddrForum> GetAddrForumListsByName(string forumName)
+       {
+            string sql = $"select addrforum.*,addr.AddrName from addrforum join addr on addrforum.addrid=addr.ID where posttitle like '%{forumName}%'";
+            var getAddrForumList = conn.Query<AddrForum>(sql);
+            return getAddrForumList.ToList();
+       }
 
         /// <summary>
         /// 在地区论坛发帖

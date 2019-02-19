@@ -72,6 +72,18 @@ namespace WeChat.API.Server.Controllers.Forum.AddrForums
         }
 
         /// <summary>
+        /// 根据标题查询地区论坛帖子
+        /// </summary>
+        /// <param name="forumName"></param>
+        /// <returns></returns>
+        [HttpGet]
+        public List<AddrForum> GetAddrForumListsByName(string forumName)
+        {
+            var getAddrForumList = AddrForumIndexIRespository.GetAddrForumListsByName(forumName);
+            return getAddrForumList;
+        }
+
+        /// <summary>
         /// 在地区论坛发帖
         /// </summary>
         /// <param name="addrforum"></param>

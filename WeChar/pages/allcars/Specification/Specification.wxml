@@ -1,43 +1,47 @@
 <view>
-<text class='biaoti'>车型详述</text>
+  <block>
+    <view>
+      <text class='biaoti'>车型详述</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <image src='/image/timg1.jpg' class='tu1'></image>
+    </view>
+    <text>\n</text>
+    <view>
+      <text class='zi1'>指导价:</text>
+      <text class='zi2'>29.00-41.10万</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <text class='zi1'>级 别：紧凑车型</text>
+      <text class='zi3'>油 耗：5-7L/100km</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <text class='zi1'>1.4升</text>
+      <text class='zi3'>150马力</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <text>2019款 Sportback 35 TFSI 进取型 国V</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <text class='zi4'>厂商指导价： 19.10万</text>
+      <text class='zi5'>参考价：</text>
+      <text class='zi6'>15.41万元</text>
+    </view>
+    <text>\n</text>
+    <view>
+      <text class='zi1'>+/-计算</text>
+      <text class='zi7'>PK对比</text>
+    </view>
+    <view>
+      <text>\n</text>
+    </view>
+    <view>
+      <button class='button1'>我喜欢</button>
+    </view>
+  </block>
 </view>
-<text>\n</text>
-<view>
-<image src='/image/timg1.jpg' class='tu1'></image>
-</view>
-<text>\n</text>
-<view>
-<text class='zi1'>指导价:</text>
-<text class='zi2'>29.00-41.10万</text>
-</view>
-<text>\n</text>
-<view>
-<text class='zi1'>级 别：紧凑车型</text>
-<text class='zi3'>油 耗：5-7L/100km</text>
-</view>
-<text>\n</text>
-<view>
-  <text class='zi1'>1.4升</text>
-  <text class='zi3'>150马力</text>
-</view>
-<text>\n</text>
-<view>
-  <text>2019款 Sportback 35 TFSI 进取型 国V</text>
-</view>
-<text>\n</text>
-<view>
-<text class='zi4'>厂商指导价： 19.10万</text>
-<text class='zi5'>参考价：</text>
-<text class='zi6'>15.41万元</text>
-</view>
-<text>\n</text>
-<view>
-  <text class='zi1'>+/-计算</text>
-  <text class='zi7'>PK对比</text>
-</view>
-<view>
-<text>\n</text>
-</view>
-<view>
-  <button class='button1'>我喜欢</button>
-  </view>

@@ -12,7 +12,18 @@ title:"选择车系",
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
 
+    wx.request({
+      url: 'http://localhost:56603/api/AddrForumIndex/AddrLists',
+      method: 'GET',
+      success: function (data) {
+        console.log(data.data)
+        that.setData({
+          addr: data.data
+        })
+      }
+    })
   },
 
   /**
@@ -65,8 +76,9 @@ title:"选择车系",
   },
   tobrandforum:function(e){
     var brandname = e.currentTarget.dataset.brandname;
+    var id = e.currentTarget.dataset.id;
   wx.navigateTo({
-    url: '/pages/carforum/brandforum/brandforuminfo/brandforuminfo?brandname=' + brandname,
+    url: '/pages/carforum/brandforum/brandforuminfo/brandforuminfo?brandname=' + brandname + '&id=' + id,
   })
   },
 })

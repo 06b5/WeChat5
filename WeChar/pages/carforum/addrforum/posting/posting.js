@@ -73,7 +73,7 @@ Page({
     var postTitle = event.detail.value.postTitle;
     var postContent = event.detail.value.postContent;
     wx.request({
-      url: 'http://localhost:56603/api/AddrForumIndex/Posting',
+      url: 'http://localhost:56603/api/AddrForumIndex/Add',
       method: 'POST',
       data: {
         AddrID: addrid,

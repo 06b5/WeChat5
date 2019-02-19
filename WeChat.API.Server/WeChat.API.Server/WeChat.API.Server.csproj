@@ -218,6 +218,7 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AddrForumIndexController.cs" />
+    <Compile Include="Controllers\BranController.cs" />
     <Compile Include="Controllers\BrandForumIndexController.cs" />
     <Compile Include="Controllers\CarPricturesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />

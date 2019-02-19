@@ -1,12 +1,11 @@
-// pages/carforum/brandforum/brandforuminfo/brandforuminfo.js
+// pages/carforum/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
-   
+    title: "汽车之家查询",
   },
 
   /**
@@ -14,26 +13,26 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      themename: options.themename + "论坛",
-    });
+      serechTitle: options.postTitle
+    })
     var that = this;
     wx.request({
-      url: 'http://localhost:56603/api/ThemeForumIndex/GetThemeForumList?themeId=' + options.id,
+      url: 'http://localhost:56603/api/AddrForumIndex/GetAddrForumListsByName',
       method: 'GET',
-      data: {},
+      data: { forumName:options.postTitle},
       success: function (data) {
         that.setData({
-          postlist: data.data
+          addrpostlist: data.data
         })
       }
     });
     wx.request({
-      url: 'http://localhost:56603/api/ThemeForumIndex/GetReplyNum?ThemeForumId=' + options.id,
+      url: 'http://localhost:56603/api/AddrForumIndex/GetReplyNum?addrForumId=' + options.id,
       method: 'GET',
       success: function (res) {
         console.log(res.data);
         that.setData({
-          ansernum: res.data
+          addransernum: res.data
         })
       }
     });
@@ -86,18 +85,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-  into: function (e) {
-    var posttitle = e.currentTarget.dataset.posttitle;
-    var id = e.currentTarget.dataset.id;
-    wx.navigateTo({
-      url: '/pages/carforum/themeforum/forumpost/forumpost?posttitle=' + posttitle + '&id=' + id,
-    })
-  },
-  fatie(event) {
-    var themeid = event.currentTarget.dataset.themeid;
-    wx.navigateTo({
-      url: '/pages/carforum/themeforum/posting/posting?themeid=' + themeid,
-    })
-  },
+  }
 })

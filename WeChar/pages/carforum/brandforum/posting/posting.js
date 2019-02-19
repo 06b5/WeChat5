@@ -12,7 +12,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      brandid: options.brandid
+    })
+    console.log(brandid)
   },
 
   /**
@@ -62,5 +65,31 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  posting: function (event) {
+    var that = this;
+    var Brandid = event.currentTarget.dataset.brandid;
+    var postTitle = event.detail.value.postTitle;
+    var postContent = event.detail.value.postContent;
+    wx.request({
+      url: 'http://localhost:56603/api/BrandForumIndex/Add',
+      method: 'POST',
+      data: {
+        BrandID: Brandid,
+        PostTitle: postTitle,
+        PostContent: postContent,
+        PostImgs: null
+      },
+      success: function (data) {
+        wx.showToast({
+          title: '发帖成功!'
+
+        })
+        that.onLoad();
+      },
+      fail: function (data) {
+        console.log(data)
+      }
+    })
+  },
 })

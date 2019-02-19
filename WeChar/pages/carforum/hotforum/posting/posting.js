@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: '发布新帖'
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      hotid: options.hotid
+    })
+    console.log(hotid)
   },
 
   /**
@@ -62,5 +65,31 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+  posting: function (event) {
+    var that = this;
+    var hotid = event.currentTarget.dataset.hotid;
+    var postTitle = event.detail.value.postTitle;
+    var postContent = event.detail.value.postContent;
+    wx.request({
+      url: 'http://localhost:56603/api/HotForumIndex/Add',
+      method: 'POST',
+      data: {
+        HotID: hotid,
+        PostTitle: postTitle,
+        PostContent: postContent,
+        PostImgs: null
+      },
+      success: function (data) {
+        wx.showToast({
+          title: '发帖成功!'
+
+        })
+        that.onLoad();
+      },
+      fail: function (data) {
+        console.log(data)
+      }
+    })
+  },
 })

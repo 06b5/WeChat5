@@ -6,7 +6,7 @@ Page({
    */
   data: {
     
-    post:'21岁开法拉利好不好？',
+  
   },
 
   /**
@@ -14,9 +14,34 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      title: options.posttitle,
+      Title: options.posttitle,
+      forumid: options.id
+    })
 
-    }) 
+    var that = this;
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/GetThemeForumLists?Id=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        console.log(data.PostTitle)
+        that.setData({
+          postcontent: data.data,
+
+        })
+      }
+    });
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/GetThemeForumReplyList?themeForumId=' + options.id,
+      method: 'GET',
+      data: {},
+      success: function (data) {
+        that.setData({
+          getansers: data.data,
+
+        })
+      }
+    });
   },
 
   /**
@@ -66,5 +91,27 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  replies: function (event) {
+    var that = this;
+    var repliescontent = event.detail.value.repliescontent;
+
+    var themeForumid = event.currentTarget.dataset.themeforumid;
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/themeReply',
+      method: 'POST',
+      data: {
+        ThemeForumID: themeForumid,
+        AnserContent: repliescontent
+      },
+      success: function (data) {
+        wx.showToast({
+          title: '回复成功!'
+
+        })
+        that.onLoad();
+
+      }
+    })
   }
 })

@@ -12,7 +12,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
 
+    wx.request({
+      url: 'http://localhost:56603/api/ThemeForumIndex/ThemeLists',
+      method: 'GET',
+      success: function (data) {
+        console.log(data.data)
+        that.setData({
+          theme: data.data
+        })
+      }
+    })
   },
 
   /**
@@ -65,8 +76,10 @@ Page({
   },
   tothemeforum: function (e) {
     var themename = e.currentTarget.dataset.themename;
+    var id = e.currentTarget.dataset.id;
+    console.log(themename);
     wx.navigateTo({
-      url: '/pages/carforum/themeforum/themeforuminfo/themeforuminfo?themename=' + themename,
+      url: '/pages/carforum/themeforum/themeforuminfo/themeforuminfo?themename=' + themename + '&id=' + id,
     })
-  },
+  }
 })

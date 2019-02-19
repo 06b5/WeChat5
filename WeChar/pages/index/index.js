@@ -14,13 +14,12 @@ Page({
     interval: 5000,
     duration: 1000
   },
-  onLoad: function(pingid) {
+  onLoad: function() {
     var that = this;
     wx.request({
       url: 'http://localhost:56603/api/Index/GetIndexNews',
       method:'GET',
       success: function (res) {
-        console.log(res.data)
         that.setData({
           indexNews: res.data        
         })         

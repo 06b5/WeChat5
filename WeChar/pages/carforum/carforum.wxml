@@ -4,9 +4,10 @@
   <text>\n</text>
   <text>\n</text>
   <view>
-    <form>
+    <form bindsubmit='searchTitle'>
       <view>
-        <input class='serech' placeholder='输入查询内容'></input>
+        <input class='serech' name='serechTitle' value='{{serechTitle}}' placeholder='输入查询内容' ></input>
+        <button class='selbutton'>查询</button>
       </view>
     </form>
   </view>
@@ -21,21 +22,28 @@
   <text class='Jingxuan'>论坛精选</text>
   <text>\n</text>
   <text>\n</text>
+  <block wx:for="{{addrforumlist}}" wx:key="{{item.ID}}" bindtap="AddrSeeContent" data-id="{{item.ID}}" data-posttitle="{{item.PostTitle}}">
   <view class='News'>
-    <text class='news_content'>哈弗H6车胎爆了咋办啊？不知道啊，凉拌！</text>
+    <text class='news_content'>{{item.PostTitle}}</text>
     <image src='/image/timg2.jpg' class='news_img'></image>
     <view class='content'>
-      <text class='from_forum'>哈弗H6论坛</text>
-      <text class='from_forum_hu'>10回帖</text>
-    </view>
-    <text>\n</text>
-    <view class='News'>
-      <text class='news_content'>看这图片，你买得起吗？</text>
-      <image src='/image/timg1.jpg' class='news_img'></image>
-      <view class='content'>
-        <text class='from_forum'>炫富论坛</text>
-        <text class='from_forum_hu'>70回帖</text>
-      </view>
+      <text class='from_forum'>{{item.AddrName}}</text>
+      <text class='from_forum_hu'>{{addrforumReplyNum}}回帖</text>
     </view>
   </view>
+     <text>\n</text>
+  </block>
+  <block wx:for="{{hotforumlist}}" wx:key="{{item.ID}}" bindtap="HotSeeContent" data-id="{{item.ID}}" data-posttitle="{{item.PostTitle}}">
+  <view class='News'>
+    <text class='news_content'>{{item.PostTitle}}</text>
+    <image src='/image/timg1.jpg' class='news_img'></image>
+    <view class='content'>
+      <text class='from_forum'>{{item.HotName}}</text>
+      <text class='from_forum_hu'>{{hotforumReplyNum}}回帖</text>
+    </view>
+  </view>
+     <text>\n</text>
+  </block>
+  
+
 </view>
