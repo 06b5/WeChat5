@@ -17,6 +17,8 @@ using System.Web.Mvc;
 using Autofac.Integration.Mvc;
 using WeChat.API.IRespository;
 using WeChat.API.Respository;
+using WeChat.API.Respository.UserRespository;
+using WeChat.API.IRespository.IUserRespository;
 
 namespace WeChat.API.Server.App_Start
 {
@@ -61,6 +63,10 @@ namespace WeChat.API.Server.App_Start
             container.RegisterType<ToprankingRespoistory>().As<ItoprankingRespository>();
             //汽车图片
             container.RegisterType<CarPicturesRespository>().As<IcarPicturesRespository>();
+            //我的订单
+            container.RegisterType<MyShoppingListRespository>().As<IMyShoppingListRespository>();
+            //我的消息
+            container.RegisterType<MyMessagesRespository>().As<IMyMessagesRespository>();
         }
     }
 }

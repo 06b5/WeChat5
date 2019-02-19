@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/Mine/Message/Message",
     "pages/index/index",
     "pages/allcars/Choice/Choice",
     "pages/allcars/Specification/Specification",
     "pages/allcars/allcarsindex/allcarsindex",
     "pages/Mine/Invitation/Invitation",
     "pages/Mine/Homepage/Homepage",
-    "pages/Mine/Message/Message",
     "pages/Mine/Details/Details",
     "pages/carforum/brandforum/forumpost/forumpost",
     "pages/carforum/carforum",
@@ -27,8 +27,8 @@
     "pages/carforum/addrforum/posting/posting",
     "pages/carforum/addrforum/addrforuminfo/addrforuminfo",
     "pages/carforum/addrforum/forumpost/forumpost",
-    "pages/Mine/Indend/Indend",
     "pages/Mine/Intention/Intention",
+    "pages/Mine/Indend/Indend",
     "pages/Mine/History/History",
     "pages/rankinglist/rankinglist",
     "pages/WorldAuto/WorldAuto"
