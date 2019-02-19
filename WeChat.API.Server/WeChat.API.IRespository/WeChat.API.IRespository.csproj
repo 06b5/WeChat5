@@ -58,8 +58,8 @@
     <Compile Include="IpicturesRespository\IcarPicturesRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RankingIRespository\ItoprankingRespository.cs" />
-    <Compile Include="UserIRespository\MyMessagesIRespository.cs" />
-    <Compile Include="UserIRespository\MyShoppingListIRespository.cs" />
+    <Compile Include="IUserRespository\IMyMessagesRespository.cs" />
+    <Compile Include="IUserRespository\IMyShoppingListRespository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

@@ -226,6 +226,7 @@
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\ThemeForumIndexController.cs" />
     <Compile Include="Controllers\ToprankingController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
