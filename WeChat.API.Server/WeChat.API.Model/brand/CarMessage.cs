@@ -52,5 +52,14 @@ namespace WeChat.API.Model.brand
         /// 
         /// </summary>
         public string Likenum { get; set; }
+
+        /// <summary>
+        /// 油耗
+        /// </summary>
+        public string fuel { get; set; }
+        /// <summary>
+        /// 马力
+        /// </summary>
+        public string horsepower { get; set; }
     }
 }

@@ -49,6 +49,7 @@
     <Compile Include="IbrandRespository\IbranCarsRespository.cs" />
     <Compile Include="IbrandRespository\IcarbrandsRespository.cs" />
     <Compile Include="IbrandRespository\IcarMessageRespositpry.cs" />
+    <Compile Include="IbrandRespository\IcarSeriesRespository.cs" />
     <Compile Include="IForumRespository\IAddrForumRespository.cs" />
     <Compile Include="IForumRespository\IBrandForumRespository.cs" />
     <Compile Include="IForumRespository\IHotForumRespository.cs" />

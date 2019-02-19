@@ -13,22 +13,34 @@ Page({
    */
   onLoad: function(options) {
     var than = this;
+    console.log(options.Id)
     wx: wx.request({
-      url: 'http://localhost:56603/api/Bran/GetCarMessages?id=3',
-      data: '',
-      header: {},
-      method: 'GET',
-      dataType: 'json',
-      responseType: 'text',
-      success: function(res) {
-        console.log(res.data)
-        than.setData({
-          carmessage:res.data
-        })
-      },
-      fail: function(res) {},
-      complete: function(res) {},
-    })
+        url: 'http://localhost:56603/api/Bran/GetCarMessages?id=' + options.Id,
+        data: '',
+        header: {},
+        method: 'GET',
+        dataType: 'json',
+        responseType: 'text',
+        success: function(res) {
+          console.log(res.data)
+          than.setData({
+            carmessage: res.data
+          })
+        },
+        fail: function(res) {},
+        complete: function(res) {},
+      }),
+      wx.request({
+        url: 'http://localhost:56603/api/Bran/GetCarSeries?id=' + options.Id,
+        method: 'get',
+        success: function(res) {
+          console.log(res.data)
+          console.log(res.Id)
+          than.setData({
+            carseries: res.data
+          })
+        }
+      })
   },
 
   /**
