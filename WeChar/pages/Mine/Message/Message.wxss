@@ -9,3 +9,11 @@ margin-left: 200rpx;
   margin-right:40rpx;
   margin-left: 20rpx
 }
+
+.tex1{
+  margin-left: 270rpx;
+}
+
+.tex2{
+  margin-left: 270rpx;
+}

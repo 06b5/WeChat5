@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/Mine/Message/Message",
-    
     "pages/allcars/Choice/Choice",
     "pages/allcars/Specification/Specification",
     "pages/allcars/allcarsindex/allcarsindex",
