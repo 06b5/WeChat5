@@ -63,6 +63,7 @@
     <Compile Include="Pictures\CarPictures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ranking\Topranking.cs" />
+    <Compile Include="User\CarSpecification.cs" />
     <Compile Include="User\MyMessage.cs" />
     <Compile Include="User\MyShoppingList.cs" />
   </ItemGroup>

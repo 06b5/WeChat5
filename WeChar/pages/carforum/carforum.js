@@ -126,7 +126,7 @@ Page({
     })
   },
   AddrSeeContent: function (e) {
-    var posttitle = e.currentTarget.dataset.posttitle;
+    var addrposttitle = e.currentTarget.dataset.posttitle;
     var id = e.currentTarget.dataset.id;
     wx.navigateTo({
       url: '/pages/carforum/addrforum/forumpost/forumpost?posttitle=' + posttitle + '&id=' + id,

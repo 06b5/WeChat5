@@ -6,31 +6,36 @@ using System.Threading.Tasks;
 
 namespace WeChat.API.Model.User
 {
-    public class MyShoppingList
+    public class CarSpecification
     {
         /// <summary>
-        /// 我的订单页主键
+        /// 主键
         /// </summary>
-        public int Id { get; set; }
+        public int ID { get; set; }
 
         /// <summary>
-        /// 订单图片
+        /// 指导价
         /// </summary>
-        public string Imgs { get; set; }
+        public int GuidePrice { get; set; }
 
         /// <summary>
-        /// 车名
+        /// 级别
         /// </summary>
-        public string Carname { get; set; }
+        public string Rank { get; set; }
 
         /// <summary>
-        /// 车辆价格
+        /// 油耗
         /// </summary>
-        public int Price { get; set; }
+        public string FuelConsumption { get; set; }
 
         /// <summary>
         /// 关联ID
         /// </summary>
         public int MSLID { get; set; }
+
+        /// <summary>
+        /// 图片
+        /// </summary>
+        public string Pircuter { get; set; }
     }
 }
