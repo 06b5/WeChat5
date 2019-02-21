@@ -45,6 +45,7 @@
     <Compile Include="brand\Brancars.cs" />
     <Compile Include="brand\Carbrands.cs" />
     <Compile Include="brand\CarMessage.cs" />
+    <Compile Include="brand\CarSeries.cs" />
     <Compile Include="Forum\AddrForum\Addr.cs" />
     <Compile Include="Forum\AddrForum\AddrForum.cs" />
     <Compile Include="Forum\AddrForum\AddrForumAnsers.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Forum\ThemeForuml\ThemeForumAnsers.cs" />
     <Compile Include="Index\IndexNews.cs" />
     <Compile Include="Index\IndexNewsPing.cs" />
+    <Compile Include="Index\login.cs" />
     <Compile Include="Pictures\CarPictures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ranking\Topranking.cs" />

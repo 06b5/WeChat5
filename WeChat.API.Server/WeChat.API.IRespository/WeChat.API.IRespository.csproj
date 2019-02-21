@@ -49,12 +49,14 @@
     <Compile Include="IbrandRespository\IbranCarsRespository.cs" />
     <Compile Include="IbrandRespository\IcarbrandsRespository.cs" />
     <Compile Include="IbrandRespository\IcarMessageRespositpry.cs" />
+    <Compile Include="IbrandRespository\IcarSeriesRespository.cs" />
     <Compile Include="IForumRespository\IAddrForumRespository.cs" />
     <Compile Include="IForumRespository\IBrandForumRespository.cs" />
     <Compile Include="IForumRespository\IHotForumRespository.cs" />
     <Compile Include="IForumRespository\IThemeForumRespository.cs" />
     <Compile Include="IndexIRespository\IindexNewsRespository.cs" />
     <Compile Include="IndexIRespository\IindexNewsPingRespository.cs" />
+    <Compile Include="IndexIRespository\IloginRespository.cs" />
     <Compile Include="IpicturesRespository\IcarPicturesRespository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RankingIRespository\ItoprankingRespository.cs" />

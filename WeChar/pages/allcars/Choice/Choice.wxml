@@ -9,7 +9,11 @@
     </view>
     <view class='table2'>
       <text>\n</text>
-      <text class='zi1' bindtap='specification'>{{item.CarName}}</text>
+      <navigator url='/pages/allcars/Specification/Specification?Id={{item.Id}}'>
+        <text class='zi1' bindtap='specification'>
+      {{item.CarName}}
+      </text>
+      </navigator>
     </view>
     <view class='table3'>
       <text class='zi2'>{{item.CarPrice}}</text>

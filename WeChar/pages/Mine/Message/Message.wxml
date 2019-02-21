@@ -7,9 +7,11 @@
 <block wx:for="{{myMessage}}" wx:key="{{item.Id}}">
 <view>
   <text>\n</text>
-  <text bindtap='message'>{{item.Sender}}</text>
+  <text bindtap='message' class='tex1'>{{item.Title}}</text>
 </view>
+<text>\n</text>
 <view>
-  <text>{{item.Title}}</text>
+  <text bindtap='message' class='tex2'>{{item.Sender}}</text>
 </view>
+<text>\n</text>
 </block>
