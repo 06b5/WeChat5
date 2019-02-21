@@ -5,7 +5,7 @@
   <text>\n</text>
   <view>
     <form bindsubmit='searchTitle'>
-      <view>
+      <view class='serechblock'>
         <input class='serech' name='serechTitle' value='{{serechTitle}}' placeholder='输入查询内容' ></input>
         <button class='selbutton'>查询</button>
       </view>
@@ -15,7 +15,7 @@
     <view class='content'>
     <view class='contentInfo'>
     <block wx:for="{{addrpostlist}}" wx:key="{{item.ID}}">
-     <text bindtap='intoaddr' data-PostTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
+     <text bindtap='intoaddr' data-postTitle='{{item.PostTitle}}' data-id='{{item.ID}}'>{{item.PostTitle}}</text>
       <text>\n</text>
       <text>\n</text>
       <text class='backforum' >{{item.AddrName}}论坛</text>

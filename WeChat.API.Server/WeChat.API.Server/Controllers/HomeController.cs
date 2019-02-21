@@ -14,5 +14,6 @@ namespace WeChat.API.Server.Controllers
 
             return View();
         }
+
     }
 }

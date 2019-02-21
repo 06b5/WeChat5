@@ -1,7 +1,9 @@
 {
   "pages": [
-    "pages/Mine/Message/Message",
     "pages/index/index",
+    "pages/carforum/search/search",
+    "pages/Mine/Message/Message",
+    
     "pages/allcars/Choice/Choice",
     "pages/allcars/Specification/Specification",
     "pages/allcars/allcarsindex/allcarsindex",
@@ -31,8 +33,8 @@
     "pages/Mine/Indend/Indend",
     "pages/Mine/History/History",
     "pages/rankinglist/rankinglist",
-    "pages/WorldAuto/WorldAuto",
-    "pages/carforum/search/search"
+    "pages/WorldAuto/WorldAuto"
+   
   ],
   "window": {
     "backgroundTextStyle": "light",
