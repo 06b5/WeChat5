@@ -60,6 +60,7 @@
     <Compile Include="Forum\ThemeForuml\ThemeForumAnsers.cs" />
     <Compile Include="Index\IndexNews.cs" />
     <Compile Include="Index\IndexNewsPing.cs" />
+    <Compile Include="Index\login.cs" />
     <Compile Include="Pictures\CarPictures.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ranking\Topranking.cs" />

@@ -97,6 +97,7 @@
     <Compile Include="ForumRespository\BrandForumRespository.cs" />
     <Compile Include="ForumRespository\HotForumRespository.cs" />
     <Compile Include="ForumRespository\ThemeForumRespository.cs" />
+    <Compile Include="IndexRespository\loginRespository.cs" />
     <Compile Include="IndexRespository\IndexNewsPingRespository.cs" />
     <Compile Include="IndexRespository\IndexNewsRespository.cs" />
     <Compile Include="PicturesRespository\CarPicturesRespository.cs" />
