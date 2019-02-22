@@ -16,6 +16,7 @@ Page({
       serechTitle: options.postTitle
     })
     var that = this;
+    if()
     wx.request({
       url: 'http://localhost:56603/api/AddrForumIndex/GetAddrForumListsByName',
       method: 'GET',

@@ -16,6 +16,7 @@ namespace WeChat.API.Server.Controllers
 
         public IindexNewsPingRespository indexNewsPingRespository { get; set; }
 
+        public IloginRespository iloginRespository { get; set; }
         /// <summary>
         /// 首页新闻
         /// </summary>
@@ -37,6 +38,13 @@ namespace WeChat.API.Server.Controllers
         {
             var indexNewsPingList = indexNewsPingRespository.GetIndexNewsPing(id);
             return indexNewsPingList;
+        }
+
+        [HttpGet]
+        public List<login> GetLogins()
+        {
+            var loginList = iloginRespository.GetLogin();
+            return loginList;
         }
     }
 }
