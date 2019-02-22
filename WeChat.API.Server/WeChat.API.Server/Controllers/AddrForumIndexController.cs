@@ -20,8 +20,8 @@ namespace WeChat.API.Server.Controllers.Forum.AddrForums
         [HttpGet]
         public List<Addr> AddrLists()
         {
-            var AddrLists = AddrForumIndexIRespository.AddrLists();
-            return AddrLists;
+            var addrLists = AddrForumIndexIRespository.AddrLists();
+            return addrLists;
         }
 
         /// <summary>

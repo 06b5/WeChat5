@@ -20,8 +20,8 @@ namespace WeChat.API.Server.Controllers
         [HttpGet]
         public List<Brand> BrandLists()
         {
-            var BrandLists = BrandForumIndexIRespository.BrandLists();
-            return BrandLists;
+            var brandLists = BrandForumIndexIRespository.BrandLists();
+            return brandLists;
         }
 
         /// <summary>
