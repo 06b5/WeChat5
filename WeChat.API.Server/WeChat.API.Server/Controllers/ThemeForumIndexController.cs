@@ -20,8 +20,8 @@ namespace WeChat.API.Server.Controllers
         [HttpGet]
         public List<Theme> ThemeLists()
         {
-            var ThemeLists = ThemeForumIndexIRespository.ThemeLists();
-            return ThemeLists;
+            var themeLists = ThemeForumIndexIRespository.ThemeLists();
+            return themeLists;
         }
 
         /// <summary>

@@ -20,8 +20,8 @@ namespace WeChat.API.Server.Controllers
         [HttpGet]
         public List<Hot> HotLists()
         {
-            var HotLists = HotForumIndexIRespository.HotLists();
-            return HotLists;
+            var hotLists = HotForumIndexIRespository.HotLists();
+            return hotLists;
         }
 
         /// <summary>
